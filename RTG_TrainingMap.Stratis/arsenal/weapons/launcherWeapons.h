@@ -1,0 +1,1 @@
+_launcherWeaponOwned = ["rtg_MRAWS_olive","rtg_MRAWS_sand", "launch_I_Titan_short_F", "launch_B_Titan_short_F", "rtg_pslr1_rpg7"];
