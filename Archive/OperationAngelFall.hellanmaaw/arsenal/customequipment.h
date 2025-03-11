@@ -3,7 +3,7 @@
 ////////////////////
 if (_UID == "76561198203577376") then // Shrike
 {
-	_arsenalEquipment append ["shrikeHat", "shrike_crye", "shrikeBackpack", "RTG_M16A4_GL_Shrike", "shrikeHat2", "shrikeRadiobag"];
+	_arsenalEquipment append ["shrikeHat", "shrike_crye", "shrikeBackpack", "RTG_M16A4_GL_Shrike", "shrikeHat2", "shrikeRadiobag", "rtg_SCAR_Shrike"];
 };
 
 if (_UID == "76561198277000540") then // Soresp
@@ -23,7 +23,7 @@ if (_UID == "76561198084356818") then // Sal
 
 if (_UID == "76561198011333529") then // Blade
 {
-	_arsenalEquipment append ["bladesBackpack", "bladeHat", "BladeRadioPackack"];
+	_arsenalEquipment append ["bladesBackpack", "bladeHat", "bladesRadioPackack"];
 };
 
 if (_UID == "76561198995763722") then // Badger
@@ -43,7 +43,7 @@ if (_UID == "76561198106526513") then // Pat
 
 if (_UID == "76561198365281706") then // Tex
 {
-	_arsenalEquipment append ["texHat", "texRifle", "texRadioPack", "texBackpack"]; 
+	_arsenalEquipment append ["texHat", "RTG_M4A5_145_Tex", "texRadioPack", "texBackpack"]; 
 };
 
 if (_UID == "76561198396315851") then // Fish
@@ -68,12 +68,12 @@ if (_UID == "76561198178327959") then // Meep
 
 if (_UID == "76561198017725120") then // Brewsky
 {
-	_arsenalEquipment append ["brewPack", "brewRadiopack"];
+	_arsenalEquipment append ["brewPack", "brewRadiopack", "rtg_vector_9mm_brew"];
 };
 
 if (_UID == "76561198033993505") then // Fizz
 {
-	_arsenalEquipment append ["fizzAlpineCarryAll", "fizzBlackCarryAll", "fizzAlpineRadioCarryAll", "fizzBlackRadioCarryAll"];
+	_arsenalEquipment append ["fizzTanCarryAll", "fizzAlpineCarryAll", "fizzBlackCarryAll", "fizzAlpineRadioCarryAll", "fizzTanRadioCarryAll", "fizzBlackRadioCarryAll", "rtg_m14_fizz"];
 };
 
 if (_UID == "76561198023590068") then // Keba 
@@ -103,7 +103,7 @@ if (_UID == "76561198832386481") then // CJ
 
 if (_UID == "76561198290618087") then // Kim
 {
-	_arsenalEquipment append ["rtg_kimUniform"];
+	_arsenalEquipment append ["rtg_kimUniform", "kim_carryall", "KimHat", "rtg_kimUniform_soldier"];
 };
 
 if (_UID == "76561198138541521") then // Ozzy

@@ -310,10 +310,3 @@ _battlerifles =
 	"lot_SCAR_grip_khaki_F",
 	"lot_SCAR_short_grip_khaki_F"
 ];
-
-_sniperRifles =
-[
-	"rhs_weap_m24sws_wd",
-	"rhs_weap_m24sws",
-	"rhs_weap_m24sws_d"
-];

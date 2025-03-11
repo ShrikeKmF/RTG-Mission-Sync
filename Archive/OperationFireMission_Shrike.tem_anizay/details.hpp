@@ -1,6 +1,6 @@
 
 // Author
-author = "Shrike";
+author = "Inops";
 
 class Header {
 
@@ -19,10 +19,10 @@ class Header {
 overviewPicture = "rtg.paa";
 
 // Include a short description and units required to play the mission if nessisary
-overviewText = "A Certified Shrike Op";
+overviewText = "RTG Private Military Company";
 
 // This header text will be displayed as people are loading the mission
-OnLoadName = "Operation Fire Mission";
+OnLoadName = "Raider Tactical Group";
 
 // This description text will be displayed as people are loading the mission, keep it relatively short
 OnLoadMission = "Raider Tactical Group";

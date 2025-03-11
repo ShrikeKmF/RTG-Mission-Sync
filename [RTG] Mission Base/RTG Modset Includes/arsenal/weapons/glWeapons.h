@@ -45,5 +45,6 @@ _glAmmo =
 _glSupportAmmo =
 [
 	"rhs_mag_M583A1_white",
+	"RTG_40mm_Smoke_Impact",
 	"ACE_HuntIR_M203"
 ];

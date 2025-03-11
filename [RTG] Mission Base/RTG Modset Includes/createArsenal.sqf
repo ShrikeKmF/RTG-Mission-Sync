@@ -94,8 +94,8 @@ if (_role == "CMD") then
 	_arsenalEquipment append _carbines;
 	_arsenalEquipment append _submachineguns;
 	_arsenalEquipment append _battlerifles;
+	_arsenalEquipment append _shotguns;
 	_arsenalEquipment append _eng;
-	_arsenalEquipment append _sniperRifles;
 	_arsenalEquipment append _mrkOptics;
 	_gear = [["JCA_arifle_M4A4_GL_black_F","acwp_rc1","ACE_DBAL_A3_Green","acwp_eotech",["rtg_30rnd_556_45",30],[],""],[],["ptv_p320t","","","",["ptv_15Rnd_9mm_P320",15],[],""],["rtg_g3_mc",[BASIC_Medical []]],["rtg_Crye_AVS_2",[BASIC_Vest ["ptv_15Rnd_9mm_P320",3,15],["rtg_30rnd_556_45",7,30]]],["rtg_radiopack_black",[BASIC_Pack SUPPORT_GL_LOADOUT ["ACE_bodyBag",1],["Laserbatteries",1,1]]],"VSM_OPS_multicam","rhsusf_shemagh2_gogg_tan",["rtg_laserDesignator_tan_gh","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch","rtg_pvs_15_brown_gh"]];
 };
@@ -123,7 +123,6 @@ if (_role == "TL") then
 	_arsenalEquipment append _mrkOptics;
 	_arsenalEquipment append _rifles;
 	_arsenalEquipment append _carbines;
-	_arsenalEquipment append _sniperRifles;
 	_gear = [["JCA_arifle_M16A4_GL_black_F","acwp_rc1","ACE_DBAL_A3_Green","hlc_optic_ATACR",["rtg_30rnd_556_45",30],[],""],[],["ptv_p320t","","","",["ptv_15Rnd_9mm_P320",15],[],""],["rtg_g3_mc",[BASIC_Medical []]],["rtg_Crye_AVS_2",[BASIC_Vest ["ptv_15Rnd_9mm_P320",3,15],["rtg_30rnd_556_45",7,30]]],["rtg_radiopack_black",[BASIC_Pack SUPPORT_GL_LOADOUT ["ACE_bodyBag",1],["Laserbatteries",1,1]]],"VSM_OPS_multicam","rhsusf_shemagh2_gogg_tan",["rtg_laserDesignator_tan_gh","","","",["Laserbatteries",1],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch","rtg_pvs_15_brown_gh"]];
 };
 if (_role == "MED") then
@@ -133,7 +132,6 @@ if (_role == "MED") then
 	_arsenalEquipment append _carbines;
 	_arsenalEquipment append _submachineguns;
 	_arsenalEquipment append _battlerifles;
-
 	_gear = [["JCA_arifle_M4A4_GL_black_F","acwp_rc1","ACE_DBAL_A3_Green","acwp_eotech",["rtg_30rnd_556_45",30],[],""],[],["ptv_p320t","","","",["ptv_15Rnd_9mm_P320",15],[],""],["rtg_g3_mc",[BASIC_Medical []]],["rtg_Crye_AVS_2",[BASIC_Vest ["ptv_15Rnd_9mm_P320",3,15],["rtg_30rnd_556_45",7,30]]],["rtg_VSM_Multicam_Backpack_Compact",[BASIC_Pack ["ACE_bloodIV_500",8],["ACE_bloodIV",4],["ACE_plasmaIV_500",8],["kat_Pulseoximeter",9],["kat_AED",1],["kat_accuvac",1],["ACE_tourniquet",8],["ACE_epinephrine",18],["kat_TXA",10],["kat_fentanyl",8],["kat_atropine",10],["kat_naloxone",10],["ACE_elasticBandage",36],["ACE_quikclot",36],["ACE_packingBandage",36],["ACE_surgicalKit",1],["kat_BVM",1],["kat_larynx",10],["ACE_morphine",16],["kat_chestSeal",8],["ACE_splint",5]]],"VSM_OPS_multicam","rhsusf_shemagh2_gogg_tan",["Binocular","","","","",[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch","rtg_pvs_15_brown_gh"]];
 };
 if (_role == "AT") then

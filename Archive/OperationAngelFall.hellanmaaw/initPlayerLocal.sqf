@@ -1,13 +1,73 @@
 ///////////////////////////////
+// RTG Vehicle Spawners
+///////////////////////////////
+// Helicopters
+_action = ["rtgHeliSpawn","Spawn Helicopter","", {}, {true}] call ace_interact_menu_fnc_createAction;
+[heliSpawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["rtg_AH1Z_Hawk", getPosATL heliSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnHawk","Hawk","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["rtg_Magpie", getPosATL heliSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnMagpie","Magpie","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["rtg_Magpie_DAP", getPosATL heliSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnMagpieDAP","Magpie DAP","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["RTG_Pelican", getPosATL heliSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnPelican","Pelican","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+// Cargo
+_action = ["rtgBoxSpawn","Spawn Crate","", {}, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["rtg_BasicSupply", getPosATL boxSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnResupply","Resupply","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["rtg_atSupply", getPosATL boxSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnAntiTank","Anti-Tank","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+_Statement = {
+	_vehicle = createVehicle["rtg_wheelsBox", getPosATL boxSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnWheels","Wheels","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+
+
+
+///////////////////////////////
 // RTG Arsenals
 ///////////////////////////////
 _role = "RFL"; // CMD, SC, TL, MED, AT, MG, PM, PLT, RFL
 
 // Create Arsenal 
-if (side player == west) then {
-    [_role] execVM "createArsenal.sqf";
-};
-
+[_role] execVM "createArsenal.sqf";
 _action = ["rtgArsenal","Open RTG Arsenal","",{[player, player, false] call ace_arsenal_fnc_openBox},{true}] call ace_interact_menu_fnc_createAction;
 ["B_supplyCrate_F", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
@@ -225,14 +285,7 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 		1 spawn {TFAR_fnc_requestRadios, true}; 
 		
 		[false, ["Platoon Net","Command-Net", "Tasking-Net", "Air-Net"]] call Rev_TFAR_fnc_setDefaultScribbles; 
-		
-		if (_role != "MED") then 
-		{ 
-			[true, ["Ares","Fenrir", "Sabre", "Spare", "Hitman"]] call Rev_TFAR_fnc_setDefaultScribbles; 
-		} else 
-		{ 
-			[true, ["Ares", "Fenrir", "Sabre", "Spare", "Hitman", "Platoon"]] call Rev_TFAR_fnc_setDefaultScribbles; 
-		};  
+		[true, ["Ares", "Fenrir", "Sabre", "Spare", "Hitman", "Platoon"]] call Rev_TFAR_fnc_setDefaultScribbles; 
 	}; 
  
  
@@ -241,7 +294,7 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 	
 	// Loadout Verification
 	// Set Points
-	private _pSetpoint = 7; 
+	private _pSetpoint = 8; 
 	private _sSetpoint = 5; 
 
     // Get the player's loadout

@@ -1,6 +1,6 @@
 
 // Author
-author = "Shrike";
+author = "Inops";
 
 class Header {
 
@@ -22,7 +22,7 @@ overviewPicture = "rtg.paa";
 overviewText = "RTG Private Military Company";
 
 // This header text will be displayed as people are loading the mission
-OnLoadName = "Operation Mortuus";
+OnLoadName = "Raider Tactical Group";
 
 // This description text will be displayed as people are loading the mission, keep it relatively short
 OnLoadMission = "Raider Tactical Group";

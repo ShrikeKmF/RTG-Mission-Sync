@@ -4,7 +4,7 @@
 respawnOnStart = 0;
 respawn = 3;
 respawnDelay = 15;
-respawnTemplates[] = { "MenuPosition"};
+respawnTemplates[] = {"MenuPosition", "Tickets"};
 
 // Chat
 disabledAI = 1;
@@ -58,31 +58,5 @@ class ACEX_Fortify_Presets {
 			{"Land_BarGate_F", 5},
 			{"Land_WiredFence_01_gate_F", 5}
 		};
-	};
-};
-
-class CfgMusic
-{
-    sounds[] = {};
-    class rtg_intro
-    {
-        name = "[RTG] Intro";
-        sound[] = {"music\intro.ogg", db+18, 1.0};
-        titles[] = {0,""};
-    };
-    class rtg_ambush
-    {
-        name = "[RTG] Ambush";
-        sound[] = {"music\ambush.ogg", db+10, 1.0};
-        titles[] = {0,""};
-    };
-};
-
-class CfgSounds
-{
-	class rtg_fireflies
-	{
-		name = "[RTG] Fireflies";
-		sound[] = { "music\fireflies.ogg", 3, 1, 75};
 	};
 };

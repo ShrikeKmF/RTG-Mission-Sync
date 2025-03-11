@@ -43,7 +43,7 @@ if (_UID == "76561198106526513") then // Pat
 
 if (_UID == "76561198365281706") then // Tex
 {
-	_arsenalEquipment append ["texHat", "texRifle", "texRadioPack", "texBackpack"]; 
+	_arsenalEquipment append ["texHat", "RTG_M4A5_145_Tex", "texRadioPack", "texBackpack"]; 
 };
 
 if (_UID == "76561198396315851") then // Fish
@@ -103,7 +103,7 @@ if (_UID == "76561198832386481") then // CJ
 
 if (_UID == "76561198290618087") then // Kim
 {
-	_arsenalEquipment append ["rtg_kimUniform"];
+	_arsenalEquipment append ["rtg_kimUniform", "kim_carryall", "KimHat", "rtg_kimUniform_soldier"];
 };
 
 if (_UID == "76561198138541521") then // Ozzy

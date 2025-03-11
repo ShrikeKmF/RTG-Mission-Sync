@@ -263,7 +263,7 @@ force ace_magazinerepack_timePerBeltLink = 8;
 force ace_magazinerepack_timePerMagazine = 2;
 
 // ACE Map
-force ace_map_BFT_Enabled = false;
+force ace_map_BFT_Enabled = true;
 force ace_map_BFT_HideAiGroups = true;
 force ace_map_BFT_Interval = 15;
 force ace_map_BFT_ShowPlayerNames = false;
@@ -1006,7 +1006,7 @@ force kat_breathing_medLvl_PocketBVM = 0;
 force kat_breathing_medLvl_Pulseoximeter = 0;
 force kat_breathing_mildValue = 73.0122;
 force kat_breathing_NasalCannula_time = 1.63246;
-kat_breathing_paco2Active = false;
+force kat_breathing_paco2Active = false;
 force kat_breathing_PneumothoraxAlwaysVisible = true;
 force kat_breathing_PneumothoraxArrest = false;
 force kat_breathing_pneumothoraxChance = 5;
@@ -1093,10 +1093,15 @@ force kat_circulation_deterioratingTamponade_interval = 60;
 force kat_circulation_enable = true;
 force kat_circulation_enable_CPR_Chances = false;
 force kat_circulation_enable_selfBloodDraw = 1;
+force kat_circulation_hardcoreDiagnose = false;
 force kat_circulation_medLvl_AED = 0;
 force kat_circulation_medLvl_AED_Station_Interact = 0;
 force kat_circulation_medLvl_AED_X = 0;
+force kat_circulation_medLvl_BPCuff = 0;
+force kat_circulation_medLvl_StethHR = 0;
 force kat_circulation_tamponadeChance = 0;
+force kat_circulation_treatmentTime_BPCuff = 12;
+force kat_circulation_treatmentTime_StethHR = 8;
 force kat_circulation_useLocation_AED = 0;
 
 // KAT - ADV Medical: Feedback
