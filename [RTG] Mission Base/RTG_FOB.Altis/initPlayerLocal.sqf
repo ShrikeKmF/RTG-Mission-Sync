@@ -6,7 +6,7 @@ _action = ["rtgHeliSpawn","Spawn Helicopter","", {}, {true}] call ace_interact_m
 [heliSpawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 _Statement = {
-	_vehicle = createVehicle["rtg_AH1Z_Hawk", getPosATL heliSpawn];
+	_vehicle = createVehicle["rtg_Hawk", getPosATL heliSpawn];
 	_vehicle setVariable ["BIS_enableRandomization", false];
 };
 _action = ["rtgSpawnHawk","Hawk","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
@@ -19,18 +19,12 @@ _Statement = {
 _action = ["rtgSpawnMagpie","Magpie","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
 [heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
-_Statement = {
-	_vehicle = createVehicle["rtg_Magpie_DAP", getPosATL heliSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnMagpieDAP","Magpie DAP","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 _Statement = {
-	_vehicle = createVehicle["RTG_Pelican", getPosATL heliSpawn];
+	_vehicle = createVehicle["rtg_sparrow", getPosATL heliSpawn];
 	_vehicle setVariable ["BIS_enableRandomization", false];
 };
-_action = ["rtgSpawnPelican","Pelican","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+_action = ["rtgSpawnSparrow","Sparrow","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
 [heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 // Cargo
@@ -58,13 +52,39 @@ _Statement = {
 _action = ["rtgSpawnWheels","Wheels","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
 [boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
+_Statement = {
+	_vehicle = createVehicle["Box_NATO_AmmoVeh_F", getPosATL boxSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnVicAmmo","Vehicle Ammo","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
+_Statement = {
+	_vehicle = createVehicle["FlexibleTank_01_forest_F", getPosATL boxSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnFuel","Fuel Drum","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
+_Statement = {
+	_vehicle = createVehicle["B_Slingload_01_Repair_F", getPosATL boxSpawn];
+	_vehicle setVariable ["BIS_enableRandomization", false];
+};
+_action = ["rtgSpawnRepair","Repair Box","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
+[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 ///////////////////////////////
 // RTG Arsenals
 ///////////////////////////////
-_role = "RFL"; // CMD, SC, TL, MED, AT, MG, PM, PLT, RFL
+#define ADD_ROLE_ACTION(ROLE, SELECTION_GROUP, LOADOUT_GROUP) \
+private _statement = { \
+    _role = ROLE; \
+    [_role] execVM "createArsenal.sqf"; \
+}; \
+_action = ["rtgTo" + ROLE ,ROLE, "", _statement,{true}] call ace_interact_menu_fnc_createAction; \
+["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", LOADOUT_GROUP, SELECTION_GROUP], _action] call ace_interact_menu_fnc_addActionToClass;
+
+_role = "Rifleman";
 
 // Create Arsenal 
 [_role] execVM "createArsenal.sqf";
@@ -76,187 +96,145 @@ _action = ["rtgRole","Change Role","", {}, {true}] call ace_interact_menu_fnc_cr
 ["B_supplyCrate_F", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 // Teams
-_action = ["rtgHitman","Command","", {}, {true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
-_action = ["rtgFreelancer","Freelancer","", {}, {true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
-_action = ["rtgFirebrand","Firebrand","", {}, {true}] call ace_interact_menu_fnc_createAction;
+_action = ["Light_Kits","Light","", {}, {true}] call ace_interact_menu_fnc_createAction;
 ["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
 
+_action = ["Medium_Kits","Medium","", {}, {true}] call ace_interact_menu_fnc_createAction;
+["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-// Hitman
-// To CMD
-_Statement = {
-	_role = "CMD";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToCMD","Commander", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgHitman"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To MED
-_Statement = {
-	_role = "MED";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToCMDMED","Medic", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgHitman"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To FO
-_Statement = {
-	_role = "TL";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToFO","Field Officer", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgHitman"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To JTAC
-_Statement = {
-	_role = "SC";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToJTAC","Air Controller", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgHitman"], _action] call ace_interact_menu_fnc_addActionToClass;
+_action = ["Heavy_Kits","Heavy","", {}, {true}] call ace_interact_menu_fnc_createAction;
+["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
 
+// Role Sections
+#define ADD_ROLE_SELECTION(SELECTION_GROUP) \
+_action = [SELECTION_GROUP, SELECTION_GROUP,"", {}, {true}] call ace_interact_menu_fnc_createAction; \
+["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "Light_Kits"], _action] call ace_interact_menu_fnc_addActionToClass; \
+["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "Medium_Kits"], _action] call ace_interact_menu_fnc_addActionToClass; \
+["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "Heavy_Kits"], _action] call ace_interact_menu_fnc_addActionToClass;
 
+ADD_ROLE_SELECTION("Command and Support")
+ADD_ROLE_SELECTION("Direct Combat")
+ADD_ROLE_SELECTION("Fire Support")
+ADD_ROLE_SELECTION("Specialist")
 
-// Freelancer
-// To SC
-_Statement = {
-	_role = "SC";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToSC","Section Commander", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To TL
-_Statement = {
-	_role = "TL";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToTL","Team Leader", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To MED
-_Statement = {
-	_role = "MED";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToMED","Medic", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To PM
-_Statement = {
-	_role = "PM";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToPM","Pointman", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To AT
-_Statement = {
-	_role = "AT";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToAT","Anti-Tank", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
-_Statement = {
-	_role = "MG";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToMG","Machine Gunner", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To RFL
-_Statement = {
-	_role = "RFL";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToRFL","Rifleman", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFreelancer"], _action] call ace_interact_menu_fnc_addActionToClass;
+// Command and Support
+ADD_ROLE_ACTION("Team Leader", "Command and Support", "Light_Kits");
+ADD_ROLE_ACTION("Team Leader", "Command and Support", "Medium_Kits");
+ADD_ROLE_ACTION("Team Leader", "Command and Support", "Heavy_Kits");
 
+ADD_ROLE_ACTION("Medic", "Command and Support", "Light_Kits");
+ADD_ROLE_ACTION("Medic", "Command and Support", "Medium_Kits");
+ADD_ROLE_ACTION("Medic", "Command and Support", "Heavy_Kits");
 
-// Firebrand
-// To PLT
-_Statement = {
-	_role = "PLT";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToPLT","Pilot", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFirebrand"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To Door Gunner
-_Statement = {
-	_role = "DG";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToDG","Door Gunner", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFirebrand"], _action] call ace_interact_menu_fnc_addActionToClass;
-// To Lead PLT
-_Statement = {
-	_role = "PLT";
-	[_role] execVM "createArsenal.sqf";
-};
-_action = ["rtgToCMDPLT","Lead Pilot", "", _Statement,{true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "rtgFirebrand"], _action] call ace_interact_menu_fnc_addActionToClass;
+ADD_ROLE_ACTION("Crewman", "Command and Support", "Heavy_Kits");
+ADD_ROLE_ACTION("Crewman", "Command and Support", "Medium_Kits");
+
+ADD_ROLE_ACTION("Pilot", "Command and Support", "Light_Kits");
+ADD_ROLE_ACTION("Pilot", "Command and Support", "Medium_Kits");
+
+// Direct Combat
+ADD_ROLE_ACTION("Rifleman", "Direct Combat", "Medium_Kits");
+ADD_ROLE_ACTION("Rifleman", "Direct Combat", "Heavy_Kits");
+
+ADD_ROLE_ACTION("Light Rifleman", "Direct Combat", "Light_Kits");
+
+// Fire Support
+ADD_ROLE_ACTION("Automatic Rifleman", "Fire Support", "Light_Kits");
+ADD_ROLE_ACTION("Automatic Rifleman", "Fire Support", "Medium_Kits");
+ADD_ROLE_ACTION("Automatic Rifleman", "Fire Support", "Heavy_Kits");
+
+ADD_ROLE_ACTION("Grenadier", "Fire Support", "Light_Kits");
+ADD_ROLE_ACTION("Grenadier", "Fire Support", "Medium_Kits");
+ADD_ROLE_ACTION("Grenadier", "Fire Support", "Heavy_Kits");
+
+ADD_ROLE_ACTION("Combat Engineer", "Fire Support", "Light_Kits");
+ADD_ROLE_ACTION("Combat Engineer", "Fire Support", "Medium_Kits");
+ADD_ROLE_ACTION("Combat Engineer", "Fire Support", "Heavy_Kits");
+
+// Specialist
+ADD_ROLE_ACTION("Medium Anti-Tank", "Specialist", "Light_Kits");
+ADD_ROLE_ACTION("Medium Anti-Tank", "Specialist", "Heavy_Kits");
+
+ADD_ROLE_ACTION("Machine Gunner", "Specialist", "Light_Kits");
+ADD_ROLE_ACTION("Machine Gunner", "Specialist", "Medium_Kits");
+ADD_ROLE_ACTION("Machine Gunner", "Specialist", "Heavy_Kits");
+
+ADD_ROLE_ACTION("Heavy Anti-Tank", "Specialist", "Light_Kits");
+ADD_ROLE_ACTION("Heavy Anti-Tank", "Specialist", "Medium_Kits");
+ADD_ROLE_ACTION("Heavy Anti-Tank", "Specialist", "Heavy_Kits");
 
 ///////////////////////////////
-// Resupply with Limit and Check Action (Multiplayer Capable, Per Box)
+// Resupply System
 ///////////////////////////////
 
-_Statement = {
-    private _supplyBox = (_this select 0); // Reference to the supply box
+#define RESUPPLY_TIME 60
+#define RESUPPLY_TIME_OUTSIDE 30
 
-    // Initialize resupply count for this box if not set
-    if (isNil {_supplyBox getVariable "rtg_ResupplyCount"}) then {
-        _supplyBox setVariable ["rtg_ResupplyCount", 0, true]; // Sync with all clients
-    };
-
-    private _loadout = player getVariable ["loadout", getUnitLoadout player];
-    player setUnitLoadout _loadout;
-
-    // Increment resupply count for this box
-    if (isServer) then {
-        private _currentCount = _supplyBox getVariable ["rtg_ResupplyCount", 0];
-        _supplyBox setVariable ["rtg_ResupplyCount", _currentCount + 1, true];
-
-        // Check if resupply limit is reached
-        if ((_currentCount + 1) >= 15) then {
-            deleteVehicle _supplyBox;
-        };
-    } else {
-        // Request server to increment the count
-        [
-            {
-                params ["_box"];
-                private _currentCount = _box getVariable ["rtg_ResupplyCount", 0];
-                _box setVariable ["rtg_ResupplyCount", _currentCount + 1, true];
-
-                if ((_currentCount + 1) >= 15) then {
-                    deleteVehicle _box;
-                };
-            }, [_supplyBox]
-        ] remoteExec ["call", 2];
-    };
-};
-
-// Action to resupply
-_action = [
-    "rtgResupply",
-    "Resupply",
-    "",
-    _Statement,
-    {true}
-] call ace_interact_menu_fnc_createAction;
-
-["rtg_BasicSupply", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-// Action to check number of resupplies
-_checkResupplies = {
+private _Statement = {
     private _supplyBox = (_this select 0);
-    private _currentCount = _supplyBox getVariable ["rtg_ResupplyCount", 0];
-    hint format ["Resupplies used for this box: %1 / 15", _currentCount];
+    private _loadout   = player getVariable ["loadout", getUnitLoadout player];
+    player setUnitLoadout _loadout;
 };
 
-_checkAction = [
-    "rtgCheckResupplies",
-    "Check Resupplies",
-    "",
-    _checkResupplies,
-    {true}
+// always-available condition
+private _resupplyCondition = {
+    true
+};
+
+// the action: show a progress bar then call _Statement
+private _resupplyAction = [
+    "rtgResupply",                       // internal action name
+    "Resupply",                          // menu text
+    "",                                  // icon (none)
+    {
+        params ["_target","_unit"];
+        // show progress; on complete, call your statement:
+        ["Resupplying..", RESUPPLY_TIME, {}, 
+            { // onComplete
+                [_unit, _target] call _Statement;
+            }, 
+            {} // no failure callback
+        ] call CBA_fnc_progressBar;
+    },
+    _resupplyCondition                  // ready‑to‑use condition
 ] call ace_interact_menu_fnc_createAction;
 
-["rtg_BasicSupply", 0, ["ACE_MainActions"], _checkAction] call ace_interact_menu_fnc_addActionToClass;
+private _resupplyActionOutside = [
+    "rtgResupply",                       // internal action name
+    "Resupply",                          // menu text
+    "",                                  // icon (none)
+    {
+        params ["_target","_unit"];
+        // show progress; on complete, call your statement:
+        ["Resupplying...", RESUPPLY_TIME_OUTSIDE, {}, 
+            { // onComplete
+                [_unit, _target] call _Statement;
+            }, 
+            {} // no failure callback
+        ] call CBA_fnc_progressBar;
+    },
+    _resupplyCondition                  // ready‑to‑use condition
+] call ace_interact_menu_fnc_createAction;
+
+// Resupply Capable Vehicles/Objects
+private _vehicleClasses = [
+    "rtg_BasicSupply",
+    "rtg_rush_shorad",
+    "rtg_rush_IS",
+	"rtg_lpb",
+	"rtg_amp_m2",
+	"rtg_amp_m2jav",
+	"rtg_amp_shorad"
+];
+
+// add the action to each class
+{
+    [_x, 0, ["ACE_MainActions"], _resupplyActionOutside] call ace_interact_menu_fnc_addActionToClass;
+} forEach _vehicleClasses;
+
+{
+    [_x, 1, ["ACE_SelfActions"], _resupplyAction] call ace_interact_menu_fnc_addActionToClass;
+} forEach _vehicleClasses;
 
 ///////////////////////////////
 // General Scripts
@@ -375,3 +353,62 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 	};
 	
 }] call CBA_fnc_addEventHandler;
+
+
+///////////////////////////////
+// Static Line actions
+// Edit the classname of the vehicle if you plane on changing the vic
+///////////////////////////////
+
+///////////////////////////////
+// Static Line Base action
+///////////////////////////////
+_action = ["staticLine","Static Line","",{_player setVariable ['VC_UnitStanding',false,true];},{true}] call ace_interact_menu_fnc_createAction;
+["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+
+///////////////////////////////
+// Static Line Stand Up
+///////////////////////////////
+_Statement = {
+	[_player] call VC_StaticLine_fnc_standUp;
+};
+_condition = {
+	!(_player getVariable ['VC_UnitStanding',false])
+};
+_action = ["hookUp","Stand Up and Hook Up","",_Statement,_condition] call ace_interact_menu_fnc_createAction; 
+["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
+
+///////////////////////////////
+// Static Line Sit Down
+///////////////////////////////
+_Statement = {
+	[_player] call VC_StaticLine_fnc_sitDown;
+};
+_condition = {
+	(_player getVariable ['VC_UnitStanding',false])
+};
+_action = ["hookUp","Unhook and Sit Down","",_Statement,_condition] call ace_interact_menu_fnc_createAction; 
+["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
+
+///////////////////////////////
+// Static Line Jump
+///////////////////////////////
+_Statement = {
+	[_target,_player] execVM "functions\staticJump.sqf";
+};
+_condition = {
+	(_player getVariable ['VC_UnitStanding',false]) && (getPosATL _target) select 2 > 40
+};
+_action = ["jump","Jump","",_Statement, _condition] call ace_interact_menu_fnc_createAction;
+["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
+
+// Spectator Settings
+player setVariable ["AllowAi", false]; //Can the player view AI units
+player setVariable ["AllowFreeCamera", false]; //Is free camera allowed
+player setVariable ["Allow3PPCamera", true]; //Is third person camera allowed
+player setVariable ["ShowFocusInfo", false]; //Will the focus info widget be shown if a player selects an entity
+player setVariable ["ShowCameraButtons", true]; //Will camera buttons be shown. These allow to change camera mode, same as pressing "space". Keep in mind that these buttons overlap with the respawn UI
+player setVariable ["ShowControlsHelper", true]; //Should control hints be shown. Be aware that pressing "F1" will not bring them up any longer if disabled
+player setVariable ["ShowHeader", true]; //Should mission time be shown at the top
+player setVariable ["ShowLists", true]; //Should entity and location lists be shown
+player setVariable ["WhitelistedSides", ["WEST"]]; //Which sides can be watched

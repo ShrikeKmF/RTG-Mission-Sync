@@ -3,19 +3,20 @@
 // Respawn System
 respawnOnStart = 0;
 respawn = 3;
-respawnDelay = 15;
-respawnTemplates[] = { "MenuPosition", "Tickets"};
+respawnDelay = 120;
+respawnTemplates[] = {"MenuPosition"};
+
 
 // Chat
 disabledAI = 1;
 disableChannels[]={2,4,5};
 
 wreckManagerMode = 0;
-corpseManagerMode = 0;
-//corpseManagerMode = 3;
-//corpseLimit = 25;
-//corpseRemovalMinTime = 1200;
-//corpseRemovalMaxTime = 1200;
+corpseManagerMode = 3;
+corpseLimit = 25;
+corpseRemovalMinTime = 1200;
+corpseRemovalMaxTime = 1200;
+minPlayerDistance = 600; 
 
 saving = 0;
 
@@ -27,18 +28,19 @@ zeusCompositionScriptLevel = 0;
 allowProfileGlasses = 1;
 
 // https://community.bistudio.com/wiki/Description.ext#showHUD
-showHUD[] = {
-    1,    // Scripted HUD (same as showHUD command)
-    1,    // Vehicle and unit info
-    1,    // Vehicle radar 
-    0,    // Vehicle compass [HIDDEN]
-    0,    // Tank direction indicator
-    1,    // Commanding menu
-    0,    // Group info bar
-    1,    // HUD weapon cursors
-    1,    // Vehicle display panels
-    0,    // "x killed by y" systemChat messages
-    0    // force show drawIcon3D icons
+showHUD[] =
+{
+	1,	// Scripted HUD (same as showHUD command)
+	1,	// Vehicle and unit info
+	0,	// Vehicle radar [HIDDEN]
+	0,	// Vehicle compass [HIDDEN]
+	1,	// Tank direction indicator
+	1,	// Commanding menu
+	1,	// Group info bar
+	1,	// HUD weapon cursors
+	1,	// Vehicle display panels
+	1,	// "x killed by y" systemChat messages
+	1	// force show drawIcon3D icons
 };
 
 

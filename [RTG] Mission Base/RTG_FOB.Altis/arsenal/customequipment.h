@@ -33,7 +33,7 @@ if (_UID == "76561198995763722") then // Badger
 
 if (_UID == "76561199069849585") then // Sam
 {
-	_arsenalEquipment append ["samHat", "samPilotHat"];
+	_arsenalEquipment append ["samHat", "samPilotHat", "rtg_samUniform_soldier", "rtg_samUniform"];
 };
 
 if (_UID == "76561198106526513") then // Pat
@@ -88,7 +88,7 @@ if (_UID == "76561199111760747") then // Torbs
 
 if (_UID == "76561198983787879") then // Nugg
 {
-	_arsenalEquipment append ["rtg_nugg", "RTG_M4A4_AFG_Nugg"];
+	_arsenalEquipment append ["rtg_nugg", "RTG_M4A4_AFG_Nugg", "UK3CB_H_WideBrim_Hat"];
 };
 
 if (_UID == "76561198106852162") then // Blue

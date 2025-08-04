@@ -8,13 +8,10 @@ _items =
 	"ACE_IR_Strobe_Item",
 	"ACE_Flashlight_XL50",
 	"ACE_MapTools",
-	"ACE_rope6",
 	"ACE_SpraypaintGreen",
 	"ACE_SpraypaintRed",
 	"ACE_SpraypaintBlue",
 	"ACE_SpraypaintYellow",
-	"ACE_wirecutter",
-	"ACE_M26_Clacker",
 	"itemMap",
 	"Laserbatteries",
 // Grenades
@@ -25,8 +22,6 @@ _items =
 	"ACE_HandFlare_Green",
 	"ACE_HandFlare_Yellow",
 	"ACE_HandFlare_Red",
-	"ACE_M84",
-	"ACE_M14", 
 // Base Medical
 	"ACE_elasticBandage", 
 	"ACE_packingBandage",
@@ -38,16 +33,6 @@ _items =
 	"kat_Painkilleritem",
 	"kat_Pervitin",
 	"kat_Painkiller",
-// Other
-	"rtg_MRAWS_HEAT_F",
-	"rtg_MRAWS_HE_F",
-	"rtg_MRAWS_SMK_F",
-	"Titan_AT",
-	"1Rnd_Smoke_Grenade_shell",
-	"1Rnd_SmokeRed_Grenade_shell",
-	"rtg_rpg_hedp_mag",
-	"rtg_rpg_heat_mag",
-	"rtg_rpg_smk_mag",
 // Night Vision
 	"rtg_pvs_15_black_gh", 
 	"rtg_pvs_15_green_gh",
@@ -73,24 +58,49 @@ _items =
 	"ACE_microDAGR",
 	"itemGPS",
 	"itemCompass",
-	"itemWatch"
+	"itemWatch",
+	"ItemAndroidMisc",
+	"ItemAndroid",
+// Cigs
+	"cigs_Apollo_cigpack", 
+	"cigs_cigars_cigarbox_5",
+	"cigs_lighter",
+	"cigs_pops_poppack",
+	"cigs_matches",
+	"cigs_crayons_crayonpack",
+	"cigs_Voron_cigpack",
+	"cigs_morley_cigpack",
+	"cigs_Kosmos_cigpack",
+	"cigs_craven_cigpack"
 ];
 
 _ammo = 
 [
 	"rtg_30rnd_556_45", 
+	"rtg_30rnd_556_45_ak", 
 	"rtg_9mm_35Rnd_mag",
 	"rtg_50_ae_20rnd_mag",
 	"rtg_30rnd_300_blk",
+	"rtg_30rnd_300_blk_ak",
 	"rtg_20Rnd_762x51",
 	"rtg_8Rnd_762x51",
 	"rtg_10rnd_10bw",
-	"rtg_6Rnd_00Buck",
-	"rtg_12g_15Rnd",
+	"rtg_5Rnd_00Buck",
+	"rtg_8Rnd_00Buck",
+	"rtg_5Rnd_Slug",
+	"rtg_8Rnd_Slug",
 	"rtg_p90",
 	"rtg_20Rnd_68x51",
 	"rhsusf_mag_40Rnd_46x30_FMJ",
-	"rtg_10Rnd_127x99"
+	"rtg_10Rnd_127x99",
+	"rtg_MRAWS_HEAT_F",
+	"rtg_MRAWS_HE_F",
+	"rtg_MRAWS_SMK_F",
+	"Titan_AT",
+	"rtg_rpg_hedp_mag",
+	"rtg_rpg_heat_mag",
+	"rtg_rpg_smk_mag",
+	"rhs_fim92_mag"
 ];
 
 _secondaryAmmo = 
@@ -120,16 +130,19 @@ _secondaryAmmo =
 
 _mgAmmo = 
 [
-	"rtg_100rnd_556_45",
 	"rtg_200Rnd_762x51_t",
 	"rtg_200rnd_556_45_t",
 	"rtg_200rnd_300_blk_t",
 	"rtg_200Rnd_762x51",
 	"rtg_200rnd_556_45",
 	"rtg_200rnd_300_blk",
-	"rtg_35Rnd_762x51",
 	"rtg_100Rnd_68x51",
-	"rtg_100Rnd_68x51_t"
+	"rtg_100Rnd_68x51_t",
+	"rtg_50Rnd_556",
+	"rtg_80Rnd_300_blk_ak",
+	"rtg_60Rnd_556_45_ak",
+	"rtg_200rnd_556_45_t_negev",
+	"rtg_200rnd_556_45_negev"
 ];
 
 _misc = _items;

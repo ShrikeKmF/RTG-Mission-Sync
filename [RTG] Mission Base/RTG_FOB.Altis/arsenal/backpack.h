@@ -1,13 +1,4 @@
 _rtgBackpacks = [
-    "rtg_Alpine_Backpack_Compact",
-    "rtg_Arid_Backpack_Compact",
-    "rtg_Black_Backpack_Compact",
-    "rtg_VSM_Multicam_Backpack_Compact",
-    "rtg_VSM_MulticamTropic_Backpack_Compact",
-    "rtg_VSM_OGA_Backpack_Compact",
-    "rtg_VSM_OGA_OD_Backpack_Compact",
-    "rtg_VSM_ProjectHonor_Backpack_Compact",
-    "rtg_Alpine_Backpack_kitbag",
     "rtg_Arid_Backpack_kitbag",
     "rtg_Black_Backpack_kitbag",
     "rtg_VSM_Multicam_Backpack_Kitbag",
@@ -15,15 +6,21 @@ _rtgBackpacks = [
     "rtg_VSM_OGA_Backpack_Kitbag",
     "rtg_VSM_OGA_OD_Backpack_Kitbag",
     "rtg_VSM_ProjectHonor_Backpack_Kitbag",
-    "rtg_Alpine_Carryall",
     "rtg_Arid_Carryall",
     "rtg_Black_Carryall",
     "rtg_VSM_Multicam_carryall",
     "rtg_VSM_MulticamTropic_carryall",
     "rtg_VSM_OGA_carryall",
     "rtg_VSM_OGA_OD_carryall",
-    "rtg_VSM_ProjectHonor_carryall",
-    "UK3CB_B_US_Backpack",
-    "rhs_assault_umbts",
-    "rhs_assault_umbts_engineer_empty"
+    "rtg_VSM_ProjectHonor_carryall"
+];
+
+_recon_backpacks = [
+    "rtg_Arid_Backpack_Compact",
+    "rtg_Black_Backpack_Compact",
+    "rtg_VSM_Multicam_Backpack_Compact",
+    "rtg_VSM_MulticamTropic_Backpack_Compact",
+    "rtg_VSM_OGA_Backpack_Compact",
+    "rtg_VSM_OGA_OD_Backpack_Compact",
+    "rtg_VSM_ProjectHonor_Backpack_Compact"
 ];

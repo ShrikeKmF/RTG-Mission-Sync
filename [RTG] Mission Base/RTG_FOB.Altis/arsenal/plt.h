@@ -1,5 +1,7 @@
 _plt = [
 	"ToolKit",
+	"slr_slingload_CargoSling",
+	"ACE_rope6",
 	"rhsusf_hgu56p_saf",
 	"rhsusf_hgu56p_visor_saf",
 	"rhsusf_hgu56p_mask_saf",
