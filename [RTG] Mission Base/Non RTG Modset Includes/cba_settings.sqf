@@ -1097,6 +1097,137 @@ hatg_setting_ui_use_image = false;
 hatg_setting_ui_x = 0;
 hatg_setting_ui_y = 0;
 
+// IEDD Notebook
+force iedd_ied_actMaxRange = 500;
+force iedd_ied_actMinRange = 300;
+force iedd_ied_addDefusalKit = false;
+force iedd_ied_addNotebook = false;
+force iedd_ied_defaultColor = "random";
+force iedd_ied_defaultDecals = true;
+force iedd_ied_defaultDirection = false;
+force iedd_ied_defaultDud = 0;
+force iedd_ied_defaultFake = 0.33;
+force iedd_ied_defaultOpenClose = 0.15;
+force iedd_ied_defaultOpenCloseEOD = 0.15;
+force iedd_ied_defaultRandomTimer = 0;
+force iedd_ied_defaultSize = 5;
+force iedd_ied_defaultTimer = 1;
+iedd_ied_defaultTimerMax = 150;
+iedd_ied_defaultTimerMin = 60;
+iedd_ied_defaultTimerValue = 90;
+force iedd_ied_defaultVariation = 6;
+force iedd_ied_defaultVarX = 0;
+force iedd_ied_expMaxRange = 20;
+force iedd_ied_expMinRange = 10;
+force iedd_ied_failChance = 0;
+force iedd_ied_failChanceEOD = 0;
+force iedd_ied_failExploseChance = 0.2;
+force iedd_ied_ignoreWireCutOrder = false;
+force iedd_ied_includeZeus = false;
+force iedd_ied_isBlockedRange = false;
+force iedd_ied_isDefusalKit = true;
+force iedd_ied_isDetectable = true;
+force iedd_ied_isDuds = false;
+force iedd_ied_isEod = true;
+force iedd_ied_maxRange = 15;
+force iedd_ied_minRange = 10;
+force iedd_ied_plrCheck = false;
+force iedd_ied_vehCheck = true;
+force iedd_ied_wireCutTime = 10;
+force iedd_ied_wireCutTimeEOD = 5;
+
+// IEDD Notebook VBIED
+force iedd_vbied_defaultDud = 0;
+force iedd_vbied_defaultEngineOn = 0;
+force iedd_vbied_defaultGetIn = 0;
+force iedd_vbied_defaultMoving = 0;
+force iedd_vbied_defaultRandomTimer = 0;
+force iedd_vbied_defaultSize = 5;
+force iedd_vbied_defaultSpeed = 45;
+force iedd_vbied_defaultTimer = 1;
+iedd_vbied_defaultTimerMax = 150;
+iedd_vbied_defaultTimerMin = 60;
+iedd_vbied_defaultTimerValue = 90;
+force iedd_vbied_defaultVariation = 5;
+force iedd_vbied_isDetectable = true;
+force iedd_vbied_maxRange = 15;
+force iedd_vbied_minRange = 10;
+force iedd_vbied_plrCheck = false;
+force iedd_vbied_vehCheck = true;
+
+// Immersive Cigs
+cigs_core_set_ace_arsenal_tab = true;
+force cigs_core_set_adv_fatigue_cough_modifier = 1;
+force cigs_core_set_adv_fatigue_decrease_delay = 5;
+force cigs_core_set_adv_fatigue_enabled = true;
+force cigs_core_set_adv_fatigue_modifier = 1;
+force cigs_core_set_effect_combustion_chance = 0.1;
+cigs_core_set_smoke_particles = 1;
+cigs_core_set_sp_addCigpack = true;
+cigs_core_set_sp_addCigpack_type = "cigs_black_devil_cigpack";
+cigs_core_set_sp_addItems = false;
+cigs_core_set_sp_addLighter = true;
+cigs_core_set_sp_addLighter_type = "cigs_matches";
+force cigs_legacy_set_loudout_replacer_enable_mission = true;
+cigs_legacy_set_loudout_replacer_enable_personal = true;
+
+// Immersive Cigs - Cigs On AI
+force cigs_core_set_cigsonai_chance = 0.15;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_Apollo_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_baja_blast_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_black_devil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_cigars_cigarbox_5 = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_craven_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_crayons_crayonpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_eckstein_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_Kosmos_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_lucky_strike_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_morley_cigpack = true;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_nil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_pops_poppack = true;
+force cigs_core_set_cigsonai_custom_#_CIV_cigs_Voron_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_Apollo_cigpack = true;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_baja_blast_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_black_devil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_cigars_cigarbox_5 = true;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_craven_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_crayons_crayonpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_eckstein_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_Kosmos_cigpack = true;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_lucky_strike_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_morley_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_nil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_pops_poppack = false;
+force cigs_core_set_cigsonai_custom_#_EAST_cigs_Voron_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_Apollo_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_baja_blast_cigpack = true;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_black_devil_cigpack = true;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_cigars_cigarbox_5 = true;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_craven_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_crayons_crayonpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_eckstein_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_Kosmos_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_lucky_strike_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_morley_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_nil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_pops_poppack = false;
+force cigs_core_set_cigsonai_custom_#_GUER_cigs_Voron_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_Apollo_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_baja_blast_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_black_devil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_cigars_cigarbox_5 = true;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_craven_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_crayons_crayonpack = true;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_eckstein_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_Kosmos_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_lucky_strike_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_morley_cigpack = true;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_nil_cigpack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_pops_poppack = false;
+force cigs_core_set_cigsonai_custom_#_WEST_cigs_Voron_cigpack = false;
+force cigs_core_set_cigsonai_delay = 5;
+force cigs_core_set_cigsonai_enable = true;
+
 // KAT - ADV Medical: Airway
 force kat_airway_Accuvac_time = 12;
 force kat_airway_autoTriage = true;
@@ -1826,15 +1957,14 @@ force tsp_cba_radio_vests = "[]";
 // TSP Breach
 force tsp_cba_breach = true;
 force tsp_cba_breach_ace = true;
-force tsp_cba_breach_ammo = [
-"B_12Gauge_Slug_NoCartridge","B_12Gauge_Pellets_Submunition",
-"rhs_ammo_12g_slug","rhs_ammo_12g_00buckshot","rhs_ammo_m576_buckshot",
-"UK3CB_BAF_B_12Gauge_Slug","UK3CB_BAF_B_12Gauge_Pellets",
-"CUP_12Gauge_Slug","CUP_B_12Gauge_Pellets","CUP_B_12Gauge_74Slug",
-"CUP_12Gauge_Pellets_Submunition_No0_Buck","CUP_12Gauge_Pellets_Submunition_No00_Buck",
-"ACE_12Gauge_Pellets_Submunition_No0_Buck","HLC_12G_Buck",
-"rtg_buckshot_pump",  "rtg_buckshot_sub_pump", "rtg_buckshot", "rtg_buckshot_sub"
-];
+force tsp_cba_breach_ammo = "[
+""B_12Gauge_Slug_NoCartridge"",""B_12Gauge_Pellets_Submunition"",
+""rhs_ammo_12g_slug"",""rhs_ammo_12g_00buckshot"",""rhs_ammo_m576_buckshot"",
+""UK3CB_BAF_B_12Gauge_Slug"",""UK3CB_BAF_B_12Gauge_Pellets"",
+""CUP_12Gauge_Slug"",""CUP_B_12Gauge_Pellets"",""CUP_B_12Gauge_74Slug"",
+""CUP_12Gauge_Pellets_Submunition_No0_Buck"",""CUP_12Gauge_Pellets_Submunition_No00_Buck"",
+""ACE_12Gauge_Pellets_Submunition_No0_Buck"",""HLC_12G_Buck"", ""rtg_buckshot_pump"",  ""rtg_buckshot_sub_pump"", ""rtg_buckshot"", ""rtg_buckshot_sub""
+]";
 force tsp_cba_breach_ammo_multiplier = 4;
 force tsp_cba_breach_auto = 5;
 force tsp_cba_breach_break = true;
@@ -1967,7 +2097,7 @@ force tsp_param_faction = false;
 force tuncon_unconinfo_allowNearestUnit = true;
 force tuncon_unconinfo_allowNearestUnitDistanceShown = true;
 force tuncon_unconinfo_delayForUnconInfoTexts = 15;
-force tuncon_unconinfo_detailedTreatmentDelay = 10;
+force tuncon_unconinfo_detailedTreatmentDelay = 4;
 force tuncon_unconinfo_enableMoan = true;
 force tuncon_unconinfo_enableShowBleeding = true;
 force tuncon_unconinfo_enableShowCardiacArrest = true;
@@ -1988,15 +2118,15 @@ uk3cb_preferedOptic = 0;
 uk3cb_preferedOpticHighMag = 0;
 
 // VCOM AI General Skill
-force Vcm_AISkills_General_AimingAccuracy = 0.7;
-force Vcm_AISkills_General_aimingShake = 0.5;
+force Vcm_AISkills_General_AimingAccuracy = 0.4;
+force Vcm_AISkills_General_aimingShake = 0.4;
 force Vcm_AISkills_General_aimingSpeed = 0.4;
-force Vcm_AISkills_General_commanding = 1;
-force Vcm_AISkills_General_courage = 1;
-force Vcm_AISkills_General_general = 0.8;
-force Vcm_AISkills_General_reloadSpeed = 1;
-force Vcm_AISkills_General_spotDistance = 0.35;
-force Vcm_AISkills_General_spotTime = 0.45;
+force Vcm_AISkills_General_commanding = 0.4;
+force Vcm_AISkills_General_courage = 0.4;
+force Vcm_AISkills_General_general = 0.4;
+force Vcm_AISkills_General_reloadSpeed = 0.4;
+force Vcm_AISkills_General_spotDistance = 0.4;
+force Vcm_AISkills_General_spotTime = 0.4;
 
 // VCOM SETTINGS
 force VCM_ActivateAI = true;
@@ -2028,7 +2158,7 @@ force Vcm_PlayerAISkills = true;
 force VCM_RAGDOLL = false;
 force VCM_RAGDOLLCHC = 0;
 force VCM_SIDEENABLED = [WEST,EAST,GUER];
-force VCM_SKILLCHANGE = true;
+force VCM_SKILLCHANGE = false;
 force Vcm_SmokeGrenadeChance = 4;
 force VCM_STATICARMT = 60;
 force VCM_StealVeh = false;

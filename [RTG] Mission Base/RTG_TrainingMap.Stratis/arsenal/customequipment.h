@@ -3,7 +3,7 @@
 ////////////////////
 if (_UID == "76561198203577376") then // Shrike
 {
-	_arsenalEquipment append ["shrikeHat", "shrike_crye", "shrikeBackpack", "RTG_M16A4_GL_Shrike", "shrikeHat2", "shrikeRadiobag", "rtg_SCAR_Shrike"];
+	_arsenalEquipment append ["shrikeHat", "shrike_crye", "shrikeBackpack", "shrikeHat2", "shrikeRadiobag"];
 };
 
 if (_UID == "76561198277000540") then // Soresp
@@ -38,7 +38,7 @@ if (_UID == "76561199069849585") then // Sam
 
 if (_UID == "76561198106526513") then // Pat
 {
-	_arsenalEquipment append ["patHat", "patVest", "patsBackpack", "rtg_pat_aug", "rtg_pat_aug_camo", "patsRadiopack"];
+	_arsenalEquipment append ["patHat", "patVest", "patsBackpack", "rtg_pat_aug", "patsRadiopack"];
 };
 
 if (_UID == "76561198365281706") then // Tex
@@ -48,7 +48,7 @@ if (_UID == "76561198365281706") then // Tex
 
 if (_UID == "76561198396315851") then // Fish
 {
-	_arsenalEquipment append ["fishPack", "rtg_vector_9mm_fish", "fishRadiopack"];
+	_arsenalEquipment append ["fishPack", "fishRadiopack"];
 };
 
 if (_UID == "76561199180940475") then // Sparkles

@@ -76,105 +76,36 @@ _action = ["rtgSpawnRepair","Repair Box","", _Statement, {true}] call ace_intera
 ///////////////////////////////
 // RTG Arsenals
 ///////////////////////////////
-#define ADD_ROLE_ACTION(ROLE, SELECTION_GROUP, LOADOUT_GROUP) \
-private _statement = { \
-    _role = ROLE; \
-    [_role] execVM "createArsenal.sqf"; \
-}; \
-_action = ["rtgTo" + ROLE ,ROLE, "", _statement,{true}] call ace_interact_menu_fnc_createAction; \
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", LOADOUT_GROUP, SELECTION_GROUP], _action] call ace_interact_menu_fnc_addActionToClass;
-
-_role = "Rifleman";
 
 // Create Arsenal 
-[_role] execVM "createArsenal.sqf";
 _action = ["rtgArsenal","Open RTG Arsenal","",{[player, player, false] call ace_arsenal_fnc_openBox},{true}] call ace_interact_menu_fnc_createAction;
 ["B_supplyCrate_F", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-// Change Player Role
-_action = ["rtgRole","Change Role","", {}, {true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+["Rifleman"] execVM "createArsenal.sqf";
+missionNamespace setVariable ["selectedRole", ["Rifleman",    ["Medium_Kits", "Heavy_Kits"], "The Rifleman is the junior member of the section whose role is to provide an adaptable and flexible capability to the section to assist the more specialist roles by carrying additional ammo and LATs."]];
 
-// Teams
-_action = ["Light_Kits","Light","", {}, {true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Medium_Kits","Medium","", {}, {true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
+// Create action
+_action = [
+    "OpenRoleSelector",          // internal action ID
+    "Open Role Selector",        // title shown in menu
+    "",                          // icon ("" = none)
+    { [] execVM "UI\RoleSelectUI\openRoleSelector.sqf"; },  // code on action
+    { true }                     // condition (always true)
+] call ace_interact_menu_fnc_createAction;
 
-_action = ["Heavy_Kits","Heavy","", {}, {true}] call ace_interact_menu_fnc_createAction;
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole"], _action] call ace_interact_menu_fnc_addActionToClass;
+// Attach to supply crate (class)
+["B_supplyCrate_F", 0, ["ACE_MainActions"], _action]
+    call ace_interact_menu_fnc_addActionToClass;
 
-// Role Sections
-#define ADD_ROLE_SELECTION(SELECTION_GROUP) \
-_action = [SELECTION_GROUP, SELECTION_GROUP,"", {}, {true}] call ace_interact_menu_fnc_createAction; \
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "Light_Kits"], _action] call ace_interact_menu_fnc_addActionToClass; \
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "Medium_Kits"], _action] call ace_interact_menu_fnc_addActionToClass; \
-["B_supplyCrate_F", 0, ["ACE_MainActions", "rtgRole", "Heavy_Kits"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-ADD_ROLE_SELECTION("Command and Support")
-ADD_ROLE_SELECTION("Direct Combat")
-ADD_ROLE_SELECTION("Fire Support")
-ADD_ROLE_SELECTION("Specialist")
-
-// Command and Support
-ADD_ROLE_ACTION("Team Leader", "Command and Support", "Light_Kits");
-ADD_ROLE_ACTION("Team Leader", "Command and Support", "Medium_Kits");
-ADD_ROLE_ACTION("Team Leader", "Command and Support", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Medic", "Command and Support", "Light_Kits");
-ADD_ROLE_ACTION("Medic", "Command and Support", "Medium_Kits");
-ADD_ROLE_ACTION("Medic", "Command and Support", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Crewman", "Command and Support", "Heavy_Kits");
-ADD_ROLE_ACTION("Crewman", "Command and Support", "Medium_Kits");
-
-ADD_ROLE_ACTION("Pilot", "Command and Support", "Light_Kits");
-ADD_ROLE_ACTION("Pilot", "Command and Support", "Medium_Kits");
-
-// Direct Combat
-ADD_ROLE_ACTION("Rifleman", "Direct Combat", "Medium_Kits");
-ADD_ROLE_ACTION("Rifleman", "Direct Combat", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Light Rifleman", "Direct Combat", "Light_Kits");
-
-// Fire Support
-ADD_ROLE_ACTION("Automatic Rifleman", "Fire Support", "Light_Kits");
-ADD_ROLE_ACTION("Automatic Rifleman", "Fire Support", "Medium_Kits");
-ADD_ROLE_ACTION("Automatic Rifleman", "Fire Support", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Grenadier", "Fire Support", "Light_Kits");
-ADD_ROLE_ACTION("Grenadier", "Fire Support", "Medium_Kits");
-ADD_ROLE_ACTION("Grenadier", "Fire Support", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Combat Engineer", "Fire Support", "Light_Kits");
-ADD_ROLE_ACTION("Combat Engineer", "Fire Support", "Medium_Kits");
-ADD_ROLE_ACTION("Combat Engineer", "Fire Support", "Heavy_Kits");
-
-// Specialist
-ADD_ROLE_ACTION("Medium Anti-Tank", "Specialist", "Light_Kits");
-ADD_ROLE_ACTION("Medium Anti-Tank", "Specialist", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Machine Gunner", "Specialist", "Light_Kits");
-ADD_ROLE_ACTION("Machine Gunner", "Specialist", "Medium_Kits");
-ADD_ROLE_ACTION("Machine Gunner", "Specialist", "Heavy_Kits");
-
-ADD_ROLE_ACTION("Heavy Anti-Tank", "Specialist", "Light_Kits");
-ADD_ROLE_ACTION("Heavy Anti-Tank", "Specialist", "Medium_Kits");
-ADD_ROLE_ACTION("Heavy Anti-Tank", "Specialist", "Heavy_Kits");
 
 ///////////////////////////////
 // Resupply System
 ///////////////////////////////
 
-#define RESUPPLY_TIME 60
-#define RESUPPLY_TIME_OUTSIDE 30
+#define RESUPPLY_TIME 100
+#define RESUPPLY_TIME_OUTSIDE 50
 
-private _Statement = {
-    private _supplyBox = (_this select 0);
-    private _loadout   = player getVariable ["loadout", getUnitLoadout player];
-    player setUnitLoadout _loadout;
-};
 
 // always-available condition
 private _resupplyCondition = {
@@ -191,7 +122,8 @@ private _resupplyAction = [
         // show progress; on complete, call your statement:
         ["Resupplying..", RESUPPLY_TIME, {}, 
             { // onComplete
-                [_unit, _target] call _Statement;
+                private _loadout = player getVariable ["loadout", getUnitLoadout player];
+                player setUnitLoadout _loadout;
             }, 
             {} // no failure callback
         ] call CBA_fnc_progressBar;
@@ -208,7 +140,8 @@ private _resupplyActionOutside = [
         // show progress; on complete, call your statement:
         ["Resupplying...", RESUPPLY_TIME_OUTSIDE, {}, 
             { // onComplete
-                [_unit, _target] call _Statement;
+                private _loadout = player getVariable ["loadout", getUnitLoadout player];
+                player setUnitLoadout _loadout;
             }, 
             {} // no failure callback
         ] call CBA_fnc_progressBar;
@@ -255,6 +188,7 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 ["ace_arsenal_displayClosed", {
     params ["_display"];
 	clearRadio;	
+	"RoleArsenalHUD" cutText ["", "PLAIN"];
 
 	// TFAR 
 	RTG_TFAR_SCRIBBLES_SETUP = { 
@@ -263,7 +197,7 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 		1 spawn {TFAR_fnc_requestRadios, true}; 
 		
 		[false, ["Platoon Net","Command-Net", "Tasking-Net", "Air-Net"]] call Rev_TFAR_fnc_setDefaultScribbles; 
-		[true, ["Ares", "Fenrir", "Sabre", "Spare", "Hitman", "Platoon"]] call Rev_TFAR_fnc_setDefaultScribbles; 
+		[true, ["Ares", "Fenrir", "Sabre", "Misfit", "Raven", "Hitman", "Platoon"]] call Rev_TFAR_fnc_setDefaultScribbles; 
 	}; 
  
  
@@ -354,6 +288,29 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 	
 }] call CBA_fnc_addEventHandler;
 
+["ace_arsenal_displayOpened", {
+    // Show the HUD
+    "RoleArsenalHUD" cutRsc ["RoleArsenalHUD", "PLAIN"];
+
+    [] spawn {
+        uiSleep 0; // wait one frame for controls to exist
+        private _display = uiNamespace getVariable ["RoleArsenalHUD", displayNull];
+        if (!isNull _display) then {
+            private _ctrl = _display displayCtrl 1801;
+
+            // Get currently selected role
+            private _selected = missionNamespace getVariable ["selectedRole", ["No Role Selected","","", ""]];
+            private _roleName = _selected select 0; // use value directly, no str()
+
+            // Update HUD
+            _ctrl ctrlSetStructuredText parseText format [
+                "<t align='right' size='1.2'>%1</t>",
+                _roleName
+            ];
+        };
+    };
+}] call CBA_fnc_addEventHandler;
+
 
 ///////////////////////////////
 // Static Line actions
@@ -364,7 +321,7 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "TAG_
 // Static Line Base action
 ///////////////////////////////
 _action = ["staticLine","Static Line","",{_player setVariable ['VC_UnitStanding',false,true];},{true}] call ace_interact_menu_fnc_createAction;
-["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+["RHS_C130J", 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 ///////////////////////////////
 // Static Line Stand Up
@@ -376,7 +333,7 @@ _condition = {
 	!(_player getVariable ['VC_UnitStanding',false])
 };
 _action = ["hookUp","Stand Up and Hook Up","",_Statement,_condition] call ace_interact_menu_fnc_createAction; 
-["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
+["RHS_C130J", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 ///////////////////////////////
 // Static Line Sit Down
@@ -388,7 +345,7 @@ _condition = {
 	(_player getVariable ['VC_UnitStanding',false])
 };
 _action = ["hookUp","Unhook and Sit Down","",_Statement,_condition] call ace_interact_menu_fnc_createAction; 
-["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
+["RHS_C130J", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 ///////////////////////////////
 // Static Line Jump
@@ -400,7 +357,7 @@ _condition = {
 	(_player getVariable ['VC_UnitStanding',false]) && (getPosATL _target) select 2 > 40
 };
 _action = ["jump","Jump","",_Statement, _condition] call ace_interact_menu_fnc_createAction;
-["UK3CB_TKA_B_C47_Late", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
+["RHS_C130J", 1, ["ACE_SelfActions", "staticLine"], _action] call ace_interact_menu_fnc_addActionToClass;
 
 // Spectator Settings
 player setVariable ["AllowAi", false]; //Can the player view AI units
@@ -412,3 +369,4 @@ player setVariable ["ShowControlsHelper", true]; //Should control hints be shown
 player setVariable ["ShowHeader", true]; //Should mission time be shown at the top
 player setVariable ["ShowLists", true]; //Should entity and location lists be shown
 player setVariable ["WhitelistedSides", ["WEST"]]; //Which sides can be watched
+

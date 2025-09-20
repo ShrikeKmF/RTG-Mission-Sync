@@ -14,7 +14,6 @@ _med = [
 	"kat_accuvac",
 	"kat_larynx",
 	"kat_AED",
-	"ACRE_PRC152",
 	"UK3CB_B_US_Medic_Backpack",
 	"UK3CB_B_Backpack_Med_OLI",
 	"UK3CB_B_Backpack_Med",
@@ -22,7 +21,8 @@ _med = [
 	"KAT_Empty_bloodIV_500",
 	"KAT_Katmin",
 	"ACE_splint",
-	"kat_Pervitin"
+	"kat_Pervitin",
+	"ACE_morphine"
 ];
 
 _med_light = [
@@ -36,7 +36,6 @@ _med_light = [
 	"kat_atropine",
 	"kat_accuvac",
 	"kat_larynx",
-	"ACRE_PRC152",
 	"KAT_Empty_bloodIV_500",
 	"KAT_Katmin",
 	"ACE_splint",

@@ -6,3 +6,4 @@ enableSaving [false, false];
 sleep 0.1;
 enableEnvironment [true, true];
 
+execVM "functions\setAiSkill.h";

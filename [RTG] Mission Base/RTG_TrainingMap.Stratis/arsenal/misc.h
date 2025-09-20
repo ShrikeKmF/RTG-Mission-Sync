@@ -14,6 +14,11 @@ _items =
 	"ACE_SpraypaintYellow",
 	"itemMap",
 	"Laserbatteries",
+	"iedd_item_notebook",
+// CBRN
+	"KAT_ChemicalDetector",
+	"kat_mask_M04",
+	"kat_gasmaskFilter",
 // Grenades
 	"HandGrenade",
 	"SmokeShell",
@@ -26,11 +31,7 @@ _items =
 	"ACE_elasticBandage", 
 	"ACE_packingBandage",
 	"ACE_quikclot",
-	"ACE_morphine",
-	"kat_guedel",
 	"ACE_tourniquet",
-	"kat_PervitinItem",
-	"kat_Painkilleritem",
 	"kat_Pervitin",
 	"kat_Painkiller",
 // Night Vision
@@ -98,7 +99,6 @@ _ammo =
 	"rtg_MRAWS_SMK_F",
 	"Titan_AT",
 	"rtg_rpg_hedp_mag",
-	"rtg_rpg_heat_mag",
 	"rtg_rpg_smk_mag",
 	"rhs_fim92_mag"
 ];
