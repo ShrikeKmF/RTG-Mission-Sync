@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=427;
+		nextID=428;
 	};
 	class Camera
 	{
-		pos[]={6496.4805,60.648048,3273.3621};
-		dir[]={-0.70308518,-0.37709194,0.60288727};
-		up[]={-0.28626069,0.92617583,0.24546519};
-		aside[]={0.65094256,-1.4901161e-08,0.75912714};
+		pos[]={6493.9868,60.648048,3256.865};
+		dir[]={-0.60219789,-0.41219518,0.68370616};
+		up[]={-0.27244464,0.9110955,0.30932024};
+		aside[]={0.75042212,-1.44355e-08,0.6609602};
 	};
 };
 binarizationWanted=0;
@@ -1921,7 +1921,6 @@ class Mission
 						angles[]={0,2.3470867,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="a4_2";
@@ -1929,6 +1928,7 @@ class Mission
 					};
 					id=48;
 					type="B_supplyCrate_F";
+					atlOffset=0.89771175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2238,7 +2238,6 @@ class Mission
 						angles[]={0,5.5002284,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="a4_3";
@@ -2246,6 +2245,7 @@ class Mission
 					};
 					id=56;
 					type="B_supplyCrate_F";
+					atlOffset=0.89771175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2725,7 +2725,6 @@ class Mission
 						angles[]={0,0.77930337,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="a4_4";
@@ -2733,6 +2732,7 @@ class Mission
 					};
 					id=69;
 					type="B_supplyCrate_F";
+					atlOffset=0.89771175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3042,7 +3042,6 @@ class Mission
 						angles[]={0,3.9324453,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="a4_5";
@@ -3050,6 +3049,7 @@ class Mission
 					};
 					id=77;
 					type="B_supplyCrate_F";
+					atlOffset=0.89771175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3529,7 +3529,6 @@ class Mission
 						angles[]={0,5.4961166,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="a4_6";
@@ -3537,6 +3536,7 @@ class Mission
 					};
 					id=90;
 					type="B_supplyCrate_F";
+					atlOffset=0.89771175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3846,7 +3846,6 @@ class Mission
 						angles[]={0,2.3660727,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						name="a4_7";
@@ -3854,6 +3853,7 @@ class Mission
 					};
 					id=98;
 					type="B_supplyCrate_F";
+					atlOffset=0.89771175;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -24932,6 +24932,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="TFAR_defaultIntercomSlot";
+							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=-2;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="VehicleCustomization";
 							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 							class Value
@@ -25381,19 +25394,6 @@ class Mission
 											};
 										};
 									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TFAR_defaultIntercomSlot";
-							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=-2;
 								};
 							};
 						};
@@ -25425,6 +25425,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="TFAR_defaultIntercomSlot";
+							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=-2;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="VehicleCustomization";
 							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 							class Value
@@ -25874,19 +25887,6 @@ class Mission
 											};
 										};
 									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TFAR_defaultIntercomSlot";
-							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=-2;
 								};
 							};
 						};
@@ -28812,14 +28812,49 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="iedd_ied_isCharge";
-							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
 								};
 							};
 						};
@@ -28955,49 +28990,14 @@ class Mission
 						};
 						class Attribute11
 						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
+							property="iedd_ied_isCharge";
+							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
 							class Value
 							{
 								class data
 								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-									};
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
