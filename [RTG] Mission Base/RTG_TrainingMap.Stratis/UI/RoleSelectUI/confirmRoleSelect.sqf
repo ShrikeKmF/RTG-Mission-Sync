@@ -24,7 +24,7 @@ _activeKit = missionNamespace getVariable ["activeKit", "Light_Kits"];
 if !(_activeKit in _kits) exitWith { hint format ["%1 is not available in the selected kit set!", _roleName]; };
 
 // Execute role assignment (replace with your arsenal logic)
-[_roleName] execVM "createArsenal.sqf";
+[_roleName] execVM "RTG Arsenal\createArsenal.sqf";
 
 // Close dialog
 closeDialog 0;

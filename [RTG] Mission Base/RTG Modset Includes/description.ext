@@ -3,7 +3,7 @@
 // Respawn System
 respawnOnStart = 0;
 respawn = 3;
-respawnDelay = 180;
+respawnDelay = 360;
 respawnTemplates[] = {"MenuPosition"};
 
 
@@ -205,14 +205,102 @@ class RscTitles
             {
                 idc = 1801;
                 text = "No Role Selected";
-                w = 14 * pixelGrid * pixelW;
+                w = 28 * pixelGrid * pixelW;
                 h = 5  * pixelGrid * pixelH;
-                x = safeZoneX + (safeZoneW - (14 * pixelGrid * pixelW)) / 2;
+                x = safeZoneX + (safeZoneW - (28 * pixelGrid * pixelW)) / 2;
                 y = safeZoneY + 2 * pixelGrid * pixelH; // Move to top
                 colorText[] = {1,1,1,1};
                 sizeEx = 3.5 * pixelGrid * pixelH;
                 shadow = 1;
             };
+        };
+    };
+};
+
+class VehicleSpawnDialog : RscDisplayName {
+    idd = 8000;
+    movingEnable = 0;
+    enableSimulation = 1;
+    onLoad = "uiNamespace setVariable ['VehicleSpawnDialog', _this select 0]";
+
+    #define DIALOG_X (safeZoneX + (safeZoneW - 70 * pixelGrid * pixelW) / 2)
+    #define DIALOG_Y (safeZoneY + (safeZoneH - 45 * pixelGrid * pixelH) / 2)
+
+    class controlsBackground {
+        class MainBackground: RscText {
+            idc = -1;
+            x = DIALOG_X;
+            y = DIALOG_Y;
+            w = 70 * pixelGrid * pixelW;
+            h = 45 * pixelGrid * pixelH;
+            colorBackground[] = {0,0,0,0.7};
+        };
+        class Frame: RscFrame {
+            idc = -1;
+            x = DIALOG_X + 2 * pixelGrid * pixelW;
+            y = DIALOG_Y + 2 * pixelGrid * pixelH;
+            w = 66 * pixelGrid * pixelW;
+            h = 41 * pixelGrid * pixelH;
+        };
+    };
+
+    class controls {
+        class VehicleText: RscText {
+            text = "Select Vehicle:";
+            x = DIALOG_X + 4 * pixelGrid * pixelW;
+            y = DIALOG_Y + 6 * pixelGrid * pixelH;
+            w = 28 * pixelGrid * pixelW;
+            h = 4 * pixelGrid * pixelH;
+        };
+        class VehicleCombo: RscCombo {
+            idc = 8001;
+            x = DIALOG_X + 4 * pixelGrid * pixelW;
+            y = DIALOG_Y + 10 * pixelGrid * pixelH;
+            w = 62 * pixelGrid * pixelW;
+            h = 5 * pixelGrid * pixelH;
+        };
+
+        class SpawnText: RscText {
+            text = "Select Spawn Point:";
+            x = DIALOG_X + 4 * pixelGrid * pixelW;
+            y = DIALOG_Y + 18 * pixelGrid * pixelH;
+            w = 28 * pixelGrid * pixelW;
+            h = 4 * pixelGrid * pixelH;
+        };
+        class SpawnCombo: RscCombo {
+            idc = 8002;
+            x = DIALOG_X + 4 * pixelGrid * pixelW;
+            y = DIALOG_Y + 22 * pixelGrid * pixelH;
+            w = 62 * pixelGrid * pixelW;
+            h = 5 * pixelGrid * pixelH;
+        };
+
+        class LoadoutText: RscText {
+            text = "Select Loadout:";
+            x = DIALOG_X + 4 * pixelGrid * pixelW;
+            y = DIALOG_Y + 30 * pixelGrid * pixelH;
+            w = 28 * pixelGrid * pixelW;
+            h = 4 * pixelGrid * pixelH;
+        };
+        class LoadoutCombo: RscCombo {
+            idc = 8003;
+            x = DIALOG_X + 4 * pixelGrid * pixelW;
+            y = DIALOG_Y + 34 * pixelGrid * pixelH;
+            w = 62 * pixelGrid * pixelW;
+            h = 5 * pixelGrid * pixelH;
+        };
+
+        class ConfirmButton: RscButton {
+            idc = 8010;
+            text = "Spawn Vehicle";
+            x = DIALOG_X + (70 * pixelGrid * pixelW - 20 * pixelGrid * pixelW) / 2;
+            y = DIALOG_Y + 40 * pixelGrid * pixelH;
+            w = 20 * pixelGrid * pixelW;
+            h = 5 * pixelGrid * pixelH;
+            colorBackground[]        = {0.3,0.3,0.3,0.7};
+            colorBackgroundActive[]  = {0.5,0.5,0.5,0.9};
+            colorFocused[]           = {0.6,0.6,0.6,0.9};
+            action = "[] call fnc_spawnVehicle";
         };
     };
 };

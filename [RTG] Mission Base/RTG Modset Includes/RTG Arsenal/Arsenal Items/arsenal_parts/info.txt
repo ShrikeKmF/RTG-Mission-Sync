@@ -1,0 +1,30 @@
+Author: Shrike
+
+[
+    ["arifle_MX_F", ["Assaulter","Rifleman"], ["WDL","ARD"]],
+    ["arifle_MXC_F", ["Medic"], ["WDL"]]
+]
+
+If Either is left blank it will fill all roles or camos
+
+Available Camos
+WDL
+ARD
+TUN 
+DES
+
+Available Roles
+Team leader
+Medic 
+Crewman 
+Pilot 
+Rifleman 
+Light Rifleman
+Pointman 
+Automatic Rifleman
+Grenadier
+Rocket Grenadier
+Combat Engineer
+Medium Anti-Tank
+Heavy Anti-Tank
+Machine Gunner

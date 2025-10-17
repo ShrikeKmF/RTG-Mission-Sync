@@ -1,0 +1,47 @@
+[
+// GL
+	["rhs_weap_M320", ["Grenadier", "Team Leader"], []],
+	["ptv_hk69", ["Grenadier", "Team Leader"], []],
+
+// Primary Secondaries
+	["ptv_mp9p_b", ["Grenadier"], []],
+	["ptv_mp9p", ["Grenadier"], ["WDL", "ARD", "TUN"]],
+	["ptv_mp9p_t", ["Grenadier"], ["ARD", "DES"]],
+	["hgun_glock19_auto_RF", ["Grenadier"], []],
+	["hgun_glock19_auto_khk_RF", ["Grenadier"], ["WDL", "ARD", "TUN"]],
+	["hgun_glock19_auto_Tan_RF", ["Grenadier"], ["ARD", "DES"]],
+	["RH_g18", ["Grenadier"], []],
+	["RH_tec9", ["Grenadier"], []],
+	["RH_muzi", ["Grenadier"], []],
+	["RH_vz61", ["Grenadier"], []],
+
+// Handguns
+	["hgun_ACPC2_black_F", [], []],
+	["hgun_G17_black_F", [], []],
+	["hgun_G17_khaki_F", [], ["WDL", "ARD", "TUN"]],
+	["hgun_G17_F", [], ["ARD", "DES"]],
+	["RH_mateba", [], []],
+	["RH_mp412", [], []],
+	["RH_python", [], []],
+	["hgun_DEagle_RF", [], []],
+	["hgun_DEagle_bronze_RF", [], []],
+	["hgun_DEagle_classic_RF", [], []],
+	["hgun_DEagle_copper_RF", [], []],
+	["hgun_DEagle_gold_RF", [], []],
+	["hgun_DEagle_camo_RF", [], []],
+	["Aegis_hgun_R57_silver_F", [], []],
+	["Aegis_hgun_R57_olive_F", [], ["WDL", "ARD", "TUN"]],
+	["Aegis_hgun_R57_sand_F", [], ["ARD", "DES"]],
+	["JCA_hgun_M9A1_black_F", [], []],
+	["JCA_hgun_M9A1_olive_F", [], ["WDL", "ARD", "TUN"]],
+	["JCA_hgun_M9A1_sand_F", [], ["ARD", "DES"]],
+	["JCA_hgun_mk23_black_F", [], []],
+	["JCA_hgun_mk23_olive_F", [], ["WDL", "ARD", "TUN"]],
+	["JCA_hgun_mk23_sand_F", [], ["ARD", "DES"]],
+	["JCA_hgun_p226_black_F", [], []],
+	["JCA_hgun_p226_olive_F", [], ["WDL", "ARD", "TUN"]],
+	["JCA_hgun_p226_sand_F", [], ["ARD", "DES"]],
+	["JCA_hgun_p320_black_F", [], []],
+	["JCA_hgun_p320_olive_F", [], ["WDL", "ARD", "TUN"]],
+	["JCA_hgun_p320_sand_F", [], ["ARD", "DES"]]
+]

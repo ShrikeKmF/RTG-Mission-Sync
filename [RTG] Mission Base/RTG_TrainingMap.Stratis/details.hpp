@@ -22,10 +22,10 @@ overviewPicture = "rtg.paa";
 overviewText = "RTG Private Military Company";
 
 // This header text will be displayed as people are loading the mission
-OnLoadName = "Raider Tactical Group";
+OnLoadName = "[RTG] Training Area";
 
 // This description text will be displayed as people are loading the mission, keep it relatively short
-OnLoadMission = "Raider Tactical Group";
+OnLoadMission = "Secured Op Homecoming (24/04/22)";
 
 // You can use another picture here while it is loading, see "overviewPicture" above on how to include it
 loadScreen = "rtg.paa";

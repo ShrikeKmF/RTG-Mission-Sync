@@ -1,4 +1,4 @@
-#include "..\..\arsenal\roles.h"
+#include "..\..\RTG Arsenal\roles.h"
 
 disableSerialization;
 _display = uiNamespace getVariable "RoleSelectorDialog";

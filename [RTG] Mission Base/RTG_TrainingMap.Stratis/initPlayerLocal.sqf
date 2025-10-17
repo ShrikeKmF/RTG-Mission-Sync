@@ -1,77 +1,44 @@
 ///////////////////////////////
-// RTG Vehicle Spawners
+// RTG Vehicle Spawner
 ///////////////////////////////
-// Helicopters
-_action = ["rtgHeliSpawn","Spawn Helicopter","", {}, {true}] call ace_interact_menu_fnc_createAction;
-[heliSpawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+fnc_openVehicleMenu = {
+    createDialog "VehicleSpawnDialog";
 
-_Statement = {
-	_vehicle = createVehicle["rtg_Hawk", getPosATL heliSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
+    private _vehCombo = (findDisplay 8000) displayCtrl 8001;
+    private _spawnCombo = (findDisplay 8000) displayCtrl 8002;
+    private _loadCombo = (findDisplay 8000) displayCtrl 8003;
+
+    // --- Fill vehicle list
+    {
+        _vehCombo lbAdd (_x select 0);
+        _vehCombo lbSetData [(lbSize _vehCombo) - 1, str _x]; // store the whole vehicle array as data
+    } forEach VEHICLE_LIST;
+
+    // --- Fill spawn points
+    {
+        _spawnCombo lbAdd (_x select 0);
+        _spawnCombo lbSetData [(lbSize _spawnCombo) - 1, (_x select 1)];
+    } forEach SPAWN_POINTS;
+
+    // --- Event handler: update loadouts when vehicle changes
+    _vehCombo ctrlAddEventHandler ["LBSelChanged", {
+        params ["_ctrl", "_index"];
+        private _data = _ctrl lbData _index;
+        private _vehInfo = call compile _data;
+        private _loadouts = _vehInfo select 2;
+        private _disp = ctrlParent _ctrl;
+        private _loadCombo = _disp displayCtrl 8003;
+
+        lbClear _loadCombo;
+
+        {
+            _loadCombo lbAdd (_x select 0);
+            _loadCombo lbSetData [(lbSize _loadCombo)-1, (_x select 1)];
+        } forEach _loadouts;
+    }];
 };
-_action = ["rtgSpawnHawk","Hawk","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["rtg_Magpie", getPosATL heliSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnMagpie","Magpie","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 
-_Statement = {
-	_vehicle = createVehicle["rtg_sparrow", getPosATL heliSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnSparrow","Sparrow","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[heliSpawner, 0, ["ACE_MainActions", "rtgHeliSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-// Cargo
-_action = ["rtgBoxSpawn","Spawn Crate","", {}, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["rtg_BasicSupply", getPosATL boxSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnResupply","Resupply","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["rtg_atSupply", getPosATL boxSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnAntiTank","Anti-Tank","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["rtg_wheelsBox", getPosATL boxSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnWheels","Wheels","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["Box_NATO_AmmoVeh_F", getPosATL boxSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnVicAmmo","Vehicle Ammo","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["FlexibleTank_01_forest_F", getPosATL boxSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnFuel","Fuel Drum","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
-
-_Statement = {
-	_vehicle = createVehicle["B_Slingload_01_Repair_F", getPosATL boxSpawn];
-	_vehicle setVariable ["BIS_enableRandomization", false];
-};
-_action = ["rtgSpawnRepair","Repair Box","", _Statement, {true}] call ace_interact_menu_fnc_createAction;
-[boxSpawner, 0, ["ACE_MainActions", "rtgBoxSpawn"], _action] call ace_interact_menu_fnc_addActionToObject;
 
 ///////////////////////////////
 // RTG Arsenals
@@ -81,7 +48,7 @@ _action = ["rtgSpawnRepair","Repair Box","", _Statement, {true}] call ace_intera
 _action = ["rtgArsenal","Open RTG Arsenal","",{[player, player, false] call ace_arsenal_fnc_openBox},{true}] call ace_interact_menu_fnc_createAction;
 ["B_supplyCrate_F", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 
-["Rifleman"] execVM "createArsenal.sqf";
+["Rifleman"] execVM "RTG Arsenal/createArsenal.sqf";
 missionNamespace setVariable ["selectedRole", ["Rifleman",    ["Medium_Kits", "Heavy_Kits"], "The Rifleman is the junior member of the section whose role is to provide an adaptable and flexible capability to the section to assist the more specialist roles by carrying additional ammo and LATs."]];
 
 
