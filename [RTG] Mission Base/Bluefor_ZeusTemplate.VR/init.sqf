@@ -99,7 +99,8 @@ VEHICLE_LIST = [
             ["Anti-Infantry", "AI_H"],
 			["Mixed", "MXD_H"],
 			["Anti-Tank", "AT_H"],
-			["Anti-Air", "AA_H"]
+			["Anti-Air", "AA_H"],
+			["Contested", "CS_H"]
         ]
     ],
     [

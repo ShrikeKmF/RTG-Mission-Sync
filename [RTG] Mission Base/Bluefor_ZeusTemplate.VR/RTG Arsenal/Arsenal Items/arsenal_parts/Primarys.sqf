@@ -126,9 +126,37 @@
 	["arifle_XMS_GL_lxws", ["Grenadier", "Team Leader"], []],
 	["arifle_XMS_GL_Gray_lxws", ["Grenadier", "Team Leader"], []],
 	["arifle_XMS_GL_khk_lxws", ["Grenadier", "Team Leader"], ["WDL", "ARD", "TUN"]],
-	["arifle_XMS_GL_sand_lxws", ["Grenadier", "Team Leader"], ["ARD", "DES"]],
+	["Aegis_arifle_AK103_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK103_plum_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK103_GL_F", ["Grenadier", "Team Leader"], []],
+	["Aegis_arifle_AK103_GL_plum_F", ["Grenadier", "Team Leader"], []],
+	["Aegis_arifle_AK74_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK74_oak_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK74S_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK74S_oak_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK74_GL_F", ["Grenadier", "Team Leader"], []],
+	["Aegis_arifle_AK74_GL_oak_F", ["Grenadier", "Team Leader"], []],
+	["Aegis_arifle_AK74M_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK74M_plum_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["Aegis_arifle_AK74M_olive_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["WDL", "ARD", "TUN"]],
+	["Aegis_arifle_AK74M_sand_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["ARD", "DES"]],
+	["Aegis_arifle_AK74M_GL_F", ["Grenadier", "Team Leader"], []],
+	["Aegis_arifle_AK74M_GL_plum_F", ["Grenadier", "Team Leader"], []],
+	["Aegis_arifle_AK74M_GL_olive_F", ["Grenadier", "Team Leader"], ["WDL", "ARD", "TUN"]],
+	["Aegis_arifle_AK74M_GL_sand_F", ["Grenadier", "Team Leader"], ["ARD", "DES"]],
+	["arifle_AK12_545_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["arifle_AK12_545_lush_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["WDL", "ARD", "TUN"]],
+	["arifle_AK12_545_tan_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["ARD", "DES"]],
+	["arifle_AK12_545_GL_F", ["Grenadier", "Team Leader"], []],
+	["arifle_AK12_545_GL_lush_F", ["Grenadier", "Team Leader"], ["WDL", "ARD", "TUN"]],
+	["arifle_AK12_545_GL_tan_F", ["Grenadier", "Team Leader"], ["ARD", "DES"]],
+	["arifle_MSBS65_black_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["arifle_MSBS65_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["WDL", "ARD", "TUN"]],
+	["arifle_MSBS65_sand_F", ["Rifleman", "Light Rifleman",  "Pointman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["ARD", "DES"]],
+	["arifle_MSBS65_GL_black_F", ["Grenadier", "Team Leader"], []],
+	["arifle_MSBS65_GL_F", ["Grenadier", "Team Leader"], ["WDL", "ARD", "TUN"]],
+	["arifle_MSBS65_GL_sand_F", ["Grenadier", "Team Leader"], ["ARD", "DES"]],
 	
-
 // Carbines
 	["arifle_Katiba_C_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
 	["arifle_Mk20c_black_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
@@ -175,6 +203,9 @@
 	["arifle_AUG_C_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["ARD", "DES"]],
 	["arifle_G36C_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
 	["arifle_G36C_Sand_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["ARD", "DES"]],
+	["arifle_AK12U_545_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], []],
+	["arifle_AK12U_545_lush_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["WDL", "ARD", "TUN"]],
+	["arifle_AK12U_545_tan_F", ["Combat Engineer", "Pilot", "Crewman", "Team Leader", "Medic", "Rocket Grenadier", "Medium Anti-Tank", "Heavy Anti-Tank"], ["ARD", "DES"]],
 	
 
 // SMGS 
@@ -205,6 +236,10 @@
 	["SMG_01_F", ["Combat Engineer", "Pilot", "Crewman"], ["ARD", "DES"]],
 
 // ARs 
+	["Aegis_arifle_RPK74M_F", ["Automatic Rifleman"], []],
+	["Aegis_arifle_RPK12_545_F", ["Automatic Rifleman"], []],
+	["Aegis_arifle_RPK12_545_lush_F", ["Automatic Rifleman"], ["WDL", "ARD", "TUN"]],
+	["Aegis_arifle_RPK12_545_tan_F", ["Automatic Rifleman"], ["ARD", "DES"]],
 	["arifle_XMS_M_lxws", ["Automatic Rifleman"], []],
 	["arifle_XMS_M_Gray_lxws", ["Automatic Rifleman"], []],
 	["arifle_XMS_M_khk_lxws", ["Automatic Rifleman"], ["WDL", "ARD", "TUN"]],
@@ -240,11 +275,14 @@
 	["ptv_m60e4rs", ["Machine Gunner", "Automatic Rifleman"], []],
 	["ptv_m60e4rs_g", ["Machine Gunner", "Automatic Rifleman"], ["WDL", "ARD", "TUN"]],
 	["ptv_m60e4rs_t", ["Machine Gunner", "Automatic Rifleman"], ["ARD", "DES"]],
+	["ptv_ng5_b", ["Machine Gunner", "Automatic Rifleman"], []],
+	["ptv_ng5", ["Machine Gunner", "Automatic Rifleman"], ["WDL", "ARD", "TUN"]],
 
 // MMGs 
 	["MMG_02_black_F", ["Machine Gunner"], []],
 	["MMG_02_khaki_F", ["Machine Gunner"], ["WDL", "ARD", "TUN"]],
 	["MMG_02_sand_F", ["Machine Gunner"], ["ARD", "DES"]],
+	["ptv_MG3r", ["Machine Gunner"], []],
 
 // Shotguns
 	["sgun_aa40_lxws", ["Combat Engineer"], []],

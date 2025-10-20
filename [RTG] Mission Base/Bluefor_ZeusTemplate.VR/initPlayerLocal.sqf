@@ -337,3 +337,5 @@ player setVariable ["ShowHeader", true]; //Should mission time be shown at the t
 player setVariable ["ShowLists", true]; //Should entity and location lists be shown
 player setVariable ["WhitelistedSides", ["WEST"]]; //Which sides can be watched
 
+// Datalink
+player setVehicleReportRemoteTargets true;

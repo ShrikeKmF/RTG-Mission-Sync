@@ -41,12 +41,12 @@
 
 // CIRAS
     // --- Arid ---
-    ["CTRG_CIRAS_Grenadier_belt_Arid", ["Grenadier","Rocket Grenadier"], ["ARD"]],
-    ["CTRG_CIRAS_Assaulter_belt_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_CIRAS_hgunner_belt_Arid", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
-    ["CTRG_CIRAS_Marksman_belt_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_CIRAS_medic_belt_Arid", ["Medic"], ["ARD"]],
-    ["CTRG_CIRAS_TeamLeader_belt_Arid", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_CIRAS_Grenadier_belt_Temperate", ["Grenadier","Rocket Grenadier"], ["ARD"]],
+    ["CTRG_CIRAS_Assaulter_belt_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_CIRAS_hgunner_belt_Temperate", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
+    ["CTRG_CIRAS_Marksman_belt_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_CIRAS_medic_belt_Temperate", ["Medic"], ["ARD"]],
+    ["CTRG_CIRAS_TeamLeader_belt_Temperate", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
 
     // --- Desert ---
     ["CTRG_CIRAS_Grenadier_belt_Desert", ["Grenadier","Rocket Grenadier"], ["DES"]],
@@ -74,18 +74,18 @@
 
 // JPC
     // --- Arid ---
-    ["CTRG_jpc_Grenadier_Arid", ["Grenadier","Rocket Grenadier"], ["ARD"]],
-    ["CTRG_jpc_Grenadier_belt_Arid", ["Grenadier","Rocket Grenadier"], ["ARD"]],
-    ["CTRG_jpc_Assaulter_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_jpc_Assaulter_belt_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_jpc_Hgunner_Arid", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
-    ["CTRG_jpc_Hgunner_belt_Arid", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
-    ["CTRG_jpc_Marksman_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_jpc_Marksman_belt_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_jpc_Medic_Arid", ["Medic"], ["ARD"]],
-    ["CTRG_jpc_Medic_belt_Arid", ["Medic"], ["ARD"]],
-    ["CTRG_jpc_TeamLeader_Arid", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_jpc_TeamLeader_belt_Arid", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_jpc_Grenadier_Temperate", ["Grenadier","Rocket Grenadier"], ["ARD"]],
+    ["CTRG_jpc_Grenadier_belt_Temperate", ["Grenadier","Rocket Grenadier"], ["ARD"]],
+    ["CTRG_jpc_Assaulter_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_jpc_Assaulter_belt_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_jpc_Hgunner_Temperate", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
+    ["CTRG_jpc_Hgunner_belt_Temperate", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
+    ["CTRG_jpc_Marksman_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_jpc_Marksman_belt_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_jpc_Medic_Temperate", ["Medic"], ["ARD"]],
+    ["CTRG_jpc_Medic_belt_Temperate", ["Medic"], ["ARD"]],
+    ["CTRG_jpc_TeamLeader_Temperate", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_jpc_TeamLeader_belt_Temperate", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
 
     // --- Desert ---
     ["CTRG_jpc_Grenadier_Desert", ["Grenadier","Rocket Grenadier"], ["DES"]],
@@ -131,18 +131,18 @@
 
 // MMAC
     // --- Arid ---
-    ["CTRG_mmac_Grenadier_Arid", ["Grenadier","Rocket Grenadier"], ["ARD"]],
-    ["CTRG_mmac_Grenadier_belt_Arid", ["Grenadier","Rocket Grenadier"], ["ARD"]],
-    ["CTRG_mmac_assaulter_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_mmac_Assaulter_belt_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_mmac_hgunner_Arid", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
-    ["CTRG_mmac_hgunner_belt_Arid", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
-    ["CTRG_mmac_Marksman_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_mmac_Marksman_belt_Arid", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_mmac_medic_Arid", ["Medic"], ["ARD"]],
-    ["CTRG_mmac_medic_belt_Arid", ["Medic"], ["ARD"]],
-    ["CTRG_mmac_TeamLeader_Arid", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
-    ["CTRG_mmac_TeamLeader_belt_Arid", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_mmac_Grenadier_Temperate", ["Grenadier","Rocket Grenadier"], ["ARD"]],
+    ["CTRG_mmac_Grenadier_belt_Temperate", ["Grenadier","Rocket Grenadier"], ["ARD"]],
+    ["CTRG_mmac_assaulter_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_mmac_Assaulter_belt_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_mmac_hgunner_Temperate", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
+    ["CTRG_mmac_hgunner_belt_Temperate", ["Automatic Rifleman", "Machine Gunner"], ["ARD"]],
+    ["CTRG_mmac_Marksman_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_mmac_Marksman_belt_Temperate", ["Rifleman", "Pointman", "Light Rifleman", "Medium Anti-Tank", "Heavy Anti-Tank", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_mmac_medic_Temperate", ["Medic"], ["ARD"]],
+    ["CTRG_mmac_medic_belt_Temperate", ["Medic"], ["ARD"]],
+    ["CTRG_mmac_TeamLeader_Temperate", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
+    ["CTRG_mmac_TeamLeader_belt_Temperate", ["Team Leader", "Pilot", "Crewman"], ["ARD"]],
 
     // --- Desert ---
     ["CTRG_mmac_Grenadier_Desert", ["Grenadier","Rocket Grenadier"], ["DES"]],

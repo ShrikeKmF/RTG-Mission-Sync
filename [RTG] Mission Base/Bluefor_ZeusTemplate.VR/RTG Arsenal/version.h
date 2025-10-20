@@ -1,1 +1,1 @@
-_ArsenalVersion = "4.2.0";
+_ArsenalVersion = "5.0.0";

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=3362;
+		nextID=3364;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=448;
+		nextID=449;
 	};
 	class Camera
 	{
-		pos[]={6624.627,70.084282,2969.9348};
-		dir[]={0.073826246,-0.3937704,0.91627914};
-		up[]={0.031627849,0.91918331,0.39254174};
-		aside[]={0.99681091,3.9674342e-07,-0.080313906};
+		pos[]={6431.4468,9.9515018,3509.5};
+		dir[]={-0.56964618,-0.11469032,-0.8139863};
+		up[]={-0.065799162,0.99335855,-0.094023369};
+		aside[]={-0.81941313,1.2154924e-06,0.57344455};
 	};
 };
 binarizationWanted=0;
@@ -13747,7 +13747,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6456.0811,7.0922632,3507.3635};
-						angles[]={-0,4.7020359,0};
+						angles[]={0,4.7020359,0};
 					};
 					side="Empty";
 					flags=4;
@@ -16634,49 +16634,14 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
+							property="iedd_ied_isCharge";
+							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
 							class Value
 							{
 								class data
 								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-									};
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
@@ -16812,14 +16777,49 @@ class Mission
 						};
 						class Attribute11
 						{
-							property="iedd_ied_isCharge";
-							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
 								};
 							};
 						};
@@ -18813,16 +18813,16 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=8;
+			nextID=4;
 		};
 		class Links
 		{
-			items=8;
+			items=4;
 			class Item0
 			{
 				linkID=0;
-				item0=3326;
-				item1=3313;
+				item0=3320;
+				item1=3317;
 				class CustomData
 				{
 					role=4;
@@ -18831,8 +18831,8 @@ class Mission
 			class Item1
 			{
 				linkID=1;
-				item0=3334;
-				item1=3313;
+				item0=3359;
+				item1=3317;
 				class CustomData
 				{
 					role=4;
@@ -18841,8 +18841,8 @@ class Mission
 			class Item2
 			{
 				linkID=2;
-				item0=3320;
-				item1=3317;
+				item0=3345;
+				item1=3349;
 				class CustomData
 				{
 					role=4;
@@ -18851,46 +18851,6 @@ class Mission
 			class Item3
 			{
 				linkID=3;
-				item0=3330;
-				item1=3317;
-				class CustomData
-				{
-					role=4;
-				};
-			};
-			class Item4
-			{
-				linkID=4;
-				item0=3359;
-				item1=3317;
-				class CustomData
-				{
-					role=4;
-				};
-			};
-			class Item5
-			{
-				linkID=5;
-				item0=3339;
-				item1=3349;
-				class CustomData
-				{
-					role=4;
-				};
-			};
-			class Item6
-			{
-				linkID=6;
-				item0=3345;
-				item1=3349;
-				class CustomData
-				{
-					role=4;
-				};
-			};
-			class Item7
-			{
-				linkID=7;
 				item0=3355;
 				item1=3349;
 				class CustomData

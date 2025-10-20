@@ -46,8 +46,8 @@
 // AT
     ["rtg_MRAWS_HEAT_F", [], []],
 	["rtg_MRAWS_HE_F", [], []],
-    ["rtg_MRAWS_SMK_F", [], []],
-	["RTG_RPG_Smoke", [], []],
+    // ["rtg_MRAWS_SMK_F", [], []],
+	// ["RTG_RPG_Smoke", [], []],
     ["RTG_RPG_Frag", [], []],
     ["JCA_MK153_HEAT_F", [], []],
     ["Titan_AT", [], []],

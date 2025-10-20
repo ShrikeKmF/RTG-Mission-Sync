@@ -88,6 +88,17 @@
 		_veh removeMagazinesTurret ["1200Rnd_Gaitling_30mm_Heli_Attack_03_F", [0]];
 		_veh addMagazineTurret ["1200Rnd_Gaitling_30mm_Heli_Attack_03_Yellow_F", [0]];
 	};
+	case "CS_H": {
+		[_veh, [1, "EF_PylonMissile_Missile_Sidearm_x1", false]] remoteExec ["setPylonLoadout", _veh];
+		[_veh, [2, "PylonRack_19Rnd_missiles_olive_RF", false, []]] remoteExec ["setPylonLoadout", _veh];
+		[_veh, [3, "EF_PylonMissile_Titan_NLOS_2Rnd", false]] remoteExec ["setPylonLoadout", _veh];
+		[_veh, [4, "EF_PylonMissile_Titan_NLOS_2Rnd", false]] remoteExec ["setPylonLoadout", _veh];
+		[_veh, [5, "PylonRack_1Rnd_AAA_missiles", false]] remoteExec ["setPylonLoadout", _veh];
+		[_veh, [6, "EF_PylonMissile_Missile_Sidearm_x1", false]] remoteExec ["setPylonLoadout", _veh];
+
+		_veh removeMagazinesTurret ["1200Rnd_Gaitling_30mm_Heli_Attack_03_F", [0]];
+		_veh addMagazineTurret ["1200Rnd_Gaitling_30mm_Heli_Attack_03_Yellow_F", [0]];
+	};
 
 // Sparrow
 	case "AI_S": {
