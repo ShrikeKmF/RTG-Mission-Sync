@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=449;
+		nextID=450;
 	};
 	class Camera
 	{
@@ -1873,7 +1873,7 @@ class Mission
 						position[]={6468.4404,5,3411.8611};
 					};
 					title="Set this for AI Skill";
-					description="Does not Apply to Zeus Spawned Units only editor";
+					description="This Does Apply to Zeus Spawned Units";
 					id=2966;
 				};
 				class Item30
@@ -3588,6 +3588,9 @@ class Mission
 								rank="CAPTAIN";
 								description="Commander @Platoon Command (Hitman)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -3708,6 +3711,9 @@ class Mission
 								rank="LIEUTENANT";
 								description="Field Officer";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -3827,6 +3833,9 @@ class Mission
 							{
 								description="JTAC";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -3946,6 +3955,9 @@ class Mission
 							{
 								description="Medic";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4065,6 +4077,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4199,6 +4214,9 @@ class Mission
 								rank="SERGEANT";
 								description="Section Commander @Infantry Team 1 (Ares)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4319,6 +4337,9 @@ class Mission
 								rank="CORPORAL";
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4438,6 +4459,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4557,6 +4581,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4676,6 +4703,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4795,6 +4825,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -4914,6 +4947,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5033,6 +5069,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5152,6 +5191,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5271,6 +5313,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5405,6 +5450,9 @@ class Mission
 								rank="SERGEANT";
 								description="Section Commander @Infantry Team 2 (Fenrir)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5573,6 +5621,9 @@ class Mission
 								rank="CORPORAL";
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5740,6 +5791,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -5907,6 +5961,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -6074,6 +6131,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -6241,6 +6301,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -6408,6 +6471,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -6575,6 +6641,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -6742,6 +6811,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -6909,6 +6981,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7091,6 +7166,9 @@ class Mission
 								rank="SERGEANT";
 								description="Section Commander @Infantry Team 3 (Sabre)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7211,6 +7289,9 @@ class Mission
 								rank="CORPORAL";
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7330,6 +7411,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7449,6 +7533,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7568,6 +7655,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7687,6 +7777,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7806,6 +7899,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -7925,6 +8021,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8044,6 +8143,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8163,6 +8265,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8297,6 +8402,9 @@ class Mission
 								rank="SERGEANT";
 								description="Section Commander @Weapons Team (Misfit)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8417,6 +8525,9 @@ class Mission
 								rank="CORPORAL";
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8536,6 +8647,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8655,6 +8769,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8774,6 +8891,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -8893,6 +9013,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9012,6 +9135,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9131,6 +9257,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9250,6 +9379,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9369,6 +9501,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9503,6 +9638,9 @@ class Mission
 								rank="LIEUTENANT";
 								description="Lead @Air Crew (Firebrand)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9622,6 +9760,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9741,6 +9882,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9860,6 +10004,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -9979,6 +10126,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10098,6 +10248,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10217,6 +10370,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10336,6 +10492,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10470,6 +10629,9 @@ class Mission
 								rank="LIEUTENANT";
 								description="Lead @Vehicle Team (Raven)";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10590,6 +10752,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10710,6 +10875,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10830,6 +10998,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -10949,6 +11120,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11068,6 +11242,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11187,6 +11364,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11306,6 +11486,9 @@ class Mission
 							{
 								description="Member";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11441,6 +11624,9 @@ class Mission
 								rank="SERGEANT";
 								description="Extra @Overflow";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11561,6 +11747,9 @@ class Mission
 								rank="CORPORAL";
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11680,6 +11869,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11799,6 +11991,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -11918,6 +12113,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12037,6 +12235,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12156,6 +12357,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12275,6 +12479,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12394,6 +12601,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12513,6 +12723,9 @@ class Mission
 							{
 								description="Extra";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12648,6 +12861,9 @@ class Mission
 								description="Lord Zeus @Monarch (Zeus)";
 								isPlayer=1;
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12768,6 +12984,9 @@ class Mission
 								rank="CAPTAIN";
 								description="Zeus";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -12888,6 +13107,9 @@ class Mission
 								rank="CAPTAIN";
 								description="Zeus";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -13008,6 +13230,9 @@ class Mission
 								rank="CAPTAIN";
 								description="Roleplayer";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -13128,6 +13353,9 @@ class Mission
 								rank="CAPTAIN";
 								description="Roleplayer";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -13248,6 +13476,9 @@ class Mission
 								rank="CAPTAIN";
 								description="Roleplayer";
 								isPlayable=1;
+								reportRemoteTargets=1;
+								receiveRemoteTargets=1;
+								reportOwnPosition=1;
 								class Inventory
 								{
 									class binocular
@@ -13760,7 +13991,7 @@ class Mission
 				};
 			};
 			id=0;
-			atlOffset=1.4965625;
+			atlOffset=1.490396;
 		};
 		class Item1
 		{
@@ -16634,14 +16865,49 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="iedd_ied_isCharge";
-							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
 								};
 							};
 						};
@@ -16777,49 +17043,14 @@ class Mission
 						};
 						class Attribute11
 						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
+							property="iedd_ied_isCharge";
+							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
 							class Value
 							{
 								class data
 								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-									};
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};

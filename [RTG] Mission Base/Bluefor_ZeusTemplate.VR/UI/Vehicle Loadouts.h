@@ -14,16 +14,19 @@
 	case "std_rush": {
 		[_veh, [1, "4Rnd_Stinger_AAM_O", false]] remoteExec ["setPylonLoadout", _veh];
 		[_veh, [2, "4Rnd_Stinger_AAM_rightside_O", false, []]] remoteExec ["setPylonLoadout", _veh];
+		[BLUFOR, _veh, "Hitman"] remoteExecCall ["BIS_fnc_addRespawnPosition", 2];
 	};
 	case "at_rush": {
 		[_veh, [1, "2Rnd_Tow2B_AGM_O", false]] remoteExec ["setPylonLoadout", _veh];
 		[_veh, [2, "2Rnd_Tow2B_AGM_rightside", false, []]] remoteExec ["setPylonLoadout", _veh];
 		_veh removeMagazinesTurret ["300Rnd_30x113_M789_HEDT", [0]];
+		[BLUFOR, _veh, "Hitman"] remoteExecCall ["BIS_fnc_addRespawnPosition", 2];
 	};
 	case "ai_rush": {
 		[_veh, [1, "12Rnd_hydra_rockets_O", false]] remoteExec ["setPylonLoadout", _veh];
 		[_veh, [2, "12Rnd_hydra_rockets_rightside_O", false, []]] remoteExec ["setPylonLoadout", _veh];
 		_veh removeMagazinesTurret ["300Rnd_30x113_M789_HEDT", [0]];
+		[BLUFOR, _veh, "Hitman"] remoteExecCall ["BIS_fnc_addRespawnPosition", 2];
 	};	
 
 // AMP
@@ -31,16 +34,19 @@
 		[_veh, [1, "4Rnd_Stinger_AAM_O", false]] remoteExec ["setPylonLoadout", _veh];
 		[_veh, [2, "4Rnd_Stinger_AAM_rightside_O", false, []]] remoteExec ["setPylonLoadout", _veh];
 		_veh addMagazineTurret ["300Rnd_30x113_M789_HEDT", [0]];
+		[BLUFOR, _veh, "Hitman"] remoteExecCall ["BIS_fnc_addRespawnPosition", 2];
 	};
 	case "at_amp": {
 		[_veh, [1, "2Rnd_Tow2B_AGM_O", false]] remoteExec ["setPylonLoadout", _veh];
 		[_veh, [2, "2Rnd_Tow2B_AGM_rightside", false, []]] remoteExec ["setPylonLoadout", _veh];
 		_veh addMagazineTurret ["300Rnd_30x113_M789_HEDT", [0]];
+		[BLUFOR, _veh, "Hitman"] remoteExecCall ["BIS_fnc_addRespawnPosition", 2];
 	};
 	case "ai_amp": {
 		[_veh, [1, "12Rnd_hydra_rockets_O", false]] remoteExec ["setPylonLoadout", _veh];
 		[_veh, [2, "12Rnd_hydra_rockets_rightside_O", false, []]] remoteExec ["setPylonLoadout", _veh];
 		_veh addMagazineTurret ["300Rnd_30x113_M789_HEDT", [0]];
+		[BLUFOR, _veh, "Hitman"] remoteExecCall ["BIS_fnc_addRespawnPosition", 2];
 	};	
 
 // Hawk

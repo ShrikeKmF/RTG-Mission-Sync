@@ -1,1 +1,0 @@
-_ArsenalVersion = "4.2.0";

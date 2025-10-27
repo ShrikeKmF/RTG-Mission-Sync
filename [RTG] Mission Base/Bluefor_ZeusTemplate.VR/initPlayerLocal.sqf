@@ -47,8 +47,6 @@ fnc_openVehicleMenu = {
 // Create Arsenal 
 _action = ["rtgArsenal","Open RTG Arsenal","",{[player, player, false] call ace_arsenal_fnc_openBox},{true}] call ace_interact_menu_fnc_createAction;
 ["B_supplyCrate_F", 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToClass;
-
-["Rifleman"] execVM "RTG Arsenal/createArsenal.sqf";
 missionNamespace setVariable ["selectedRole", ["Rifleman",    ["Medium_Kits", "Heavy_Kits"], "The Rifleman is the junior member of the section whose role is to provide an adaptable and flexible capability to the section to assist the more specialist roles by carrying additional ammo and LATs."]];
 
 

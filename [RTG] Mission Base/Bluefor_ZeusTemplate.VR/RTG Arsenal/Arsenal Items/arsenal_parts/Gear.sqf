@@ -51,5 +51,21 @@
 	["rtg_LaserDesignator_tan_wh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
 	["rtg_LaserDesignator_grn_ah", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
 	["rtg_LaserDesignator_grn_gh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
-	["rtg_LaserDesignator_grn_wh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []]
+	["rtg_LaserDesignator_grn_wh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
+
+// CSW
+	["ACE_SpareBarrel", ["Ammo Bearer"], []],
+	// Weapons
+	["ace_csw_staticM2ShieldCarry", ["CSW Gunner"], []],
+	["ace_compat_rhs_usf3_tow_carry", ["CSW Gunner"], []],
+	["ace_csw_staticGMGCarry", ["CSW Gunner"], []],
+	// Tripods
+	["ace_csw_m3CarryTripod", ["Ammo Bearer"], []],
+	["ace_csw_m3CarryTripodLow", ["Ammo Bearer"], []],
+	["ace_csw_m220CarryTripod", ["Ammo Bearer"], []],
+	// Ammo
+	["ace_csw_100Rnd_127x99_mag_yellow", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []],
+	["ace_csw_20Rnd_20mm_G_belt", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []],
+	["ace_compat_rhs_usf3_mag_TOW2b", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []],
+	["ace_compat_rhs_usf3_mag_TOW2bb", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []]
 ]

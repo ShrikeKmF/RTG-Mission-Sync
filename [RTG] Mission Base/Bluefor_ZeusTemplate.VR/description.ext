@@ -3,7 +3,7 @@
 // Respawn System
 respawnOnStart = 0;
 respawn = 3;
-respawnDelay = 360;
+respawnDelay = 240;
 respawnTemplates[] = {"MenuPosition"};
 
 
