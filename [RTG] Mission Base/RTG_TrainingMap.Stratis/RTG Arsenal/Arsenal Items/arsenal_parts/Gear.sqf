@@ -51,5 +51,18 @@
 	["rtg_LaserDesignator_tan_wh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
 	["rtg_LaserDesignator_grn_ah", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
 	["rtg_LaserDesignator_grn_gh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
-	["rtg_LaserDesignator_grn_wh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []]
+	["rtg_LaserDesignator_grn_wh", ["Rifleman", "Light Rifleman", "Pointman", "Team Leader", "Crewman", "Pilot"], []],
+
+// CSW
+	["ACE_SpareBarrel", ["Ammo Bearer"], []],
+	// Weapons
+	["ace_csw_staticATCarry", ["CSW Gunner"], []],
+	["ace_csw_staticHMGCarry", ["CSW Gunner"], []],
+	// Tripods
+	["ace_csw_m3CarryTripod", ["Ammo Bearer"], []],
+	["ace_csw_m3CarryTripodLow", ["Ammo Bearer"], []],
+	// Ammo
+	["RTG_100Rnd_127x99_SLAP_CSW", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []],
+	["RTG_TOW3A_CSW", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []],
+	["RTG_TOW3BB_CSW", ["Ammo Bearer", "Team Leader", "CSW Gunner"], []]
 ]

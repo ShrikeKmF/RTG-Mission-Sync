@@ -31,6 +31,11 @@
     ["30Rnd_9x21_Mag_v2", [], []],
     ["30Rnd_45ACP_Mag_SMG_01", [], []],
     ["10Rnd_127x55_Mag_RF", [], []],
+    ["30Rnd_762x39_polymer_Black_Mag_Tracer_F", [], []],
+    ["30Rnd_545x39_Black_Mag_Tracer_Yellow_F", [], []],
+    ["Aegis_60Rnd_545x39_Mag_Tracer_F", ["Automatic Rifleman"], []],
+    ["ptv_150Rnd_556x45_Negev_b_Tracer_Red", [], []],
+    ["ptv_100Rnd_762x51_T_MG3", [], []],
 // GL 
     ["1Rnd_HEDP_Grenade_shell", [], []],
     ["1Rnd_Smoke_Grenade_shell", [], []],
@@ -46,8 +51,8 @@
 // AT
     ["rtg_MRAWS_HEAT_F", [], []],
 	["rtg_MRAWS_HE_F", [], []],
-    ["rtg_MRAWS_SMK_F", [], []],
-	["RTG_RPG_Smoke", [], []],
+    // ["rtg_MRAWS_SMK_F", [], []],
+	// ["RTG_RPG_Smoke", [], []],
     ["RTG_RPG_Frag", [], []],
     ["JCA_MK153_HEAT_F", [], []],
     ["Titan_AT", [], []],

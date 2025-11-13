@@ -23,8 +23,9 @@
 	["JCA_Launch_m72_black_F", ["Light Rifleman", "Rifleman"], []],
 	["JCA_Launch_m72_sand_F", ["Light Rifleman", "Rifleman"], ["ARD", "DES"]],
 	["JCA_Launch_m72_olive_F", ["Light Rifleman", "Rifleman"], ["WDL", "ARD", "TUN"]],
-	["RBC_rpg28_O_Loaded", ["Light Rifleman", "Rifleman"], ["WDL", "ARD", "TUN"]],
-	["RBC_rpg28_B_Loaded", ["Light Rifleman", "Rifleman"], ["ARD", "DES"]],
+	["rhs_weap_M136", ["Light Rifleman", "Rifleman"], []],
+	["rhs_weap_M136_hedp", ["Light Rifleman", "Rifleman"], []],
+	["rhs_weap_M136_hp", ["Light Rifleman", "Rifleman"], []],
 	["RW_L2A1_ASM_Loaded", ["Light Rifleman", "Rifleman", "Combat Engineer", "Pointman"], []],
 	
 // Grenadier

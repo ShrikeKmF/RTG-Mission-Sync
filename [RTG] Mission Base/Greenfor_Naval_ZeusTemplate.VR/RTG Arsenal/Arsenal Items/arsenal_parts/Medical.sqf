@@ -22,5 +22,6 @@
 	["ACE_packingBandage", [], []],
 	["ACE_quikclot", [], []],
 	["ACE_tourniquet", [], []],
-	["kat_Painkiller", [], []]
+	["kat_Painkiller", [], []],
+	["ACE_morphine", ["Medic", "Crewman", "Pilot"], []]
 ]

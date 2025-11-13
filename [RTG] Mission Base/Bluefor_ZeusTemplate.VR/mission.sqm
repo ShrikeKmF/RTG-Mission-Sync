@@ -6,6 +6,10 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=1665;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
 		nextID=2866;
@@ -16,11 +20,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=455;
+		nextID=458;
 	};
 	class Camera
 	{
-		pos[]={6355.5015,10.319353,3390.8147};
+		pos[]={6367.5459,17.55739,3402.6846};
 		dir[]={-0.63134229,-0.4629606,-0.62216425};
 		up[]={-0.32975346,0.88637149,-0.32495916};
 		aside[]={-0.70191401,1.1123484e-07,0.71227056};
@@ -432,7 +436,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -16891,6 +16895,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="TFAR_defaultIntercomSlot";
+							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=-2;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="VehicleCustomization";
 							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 							class Value
@@ -17340,19 +17357,6 @@ class Mission
 											};
 										};
 									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TFAR_defaultIntercomSlot";
-							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=-2;
 								};
 							};
 						};
@@ -17384,6 +17388,19 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="TFAR_defaultIntercomSlot";
+							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=-2;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="VehicleCustomization";
 							expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 							class Value
@@ -17833,19 +17850,6 @@ class Mission
 											};
 										};
 									};
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TFAR_defaultIntercomSlot";
-							expression="diag_log ['defaultIntercomSlot',_value]; if (_value != -2) then {_this setVariable ['TFAR_defaultIntercomSlot',_value,true]};";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=-2;
 								};
 							};
 						};
@@ -20777,14 +20781,49 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="iedd_ied_isCharge";
-							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
+							property="iedd_ied_sides";
+							expression="_this setVariable ['iedd_ied_sides',_value];";
 							class Value
 							{
 								class data
 								{
-									singleType="BOOL";
-									value=1;
+									singleType="ARRAY";
+									class value
+									{
+										items=4;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=-1;
+											};
+										};
+									};
 								};
 							};
 						};
@@ -20920,49 +20959,14 @@ class Mission
 						};
 						class Attribute11
 						{
-							property="iedd_ied_sides";
-							expression="_this setVariable ['iedd_ied_sides',_value];";
+							property="iedd_ied_isCharge";
+							expression="if (_value) then {[_this, true] call iedd_ied_fnc_charge;_this setVariable [""iedd_ied_isCharge"", _value, true]}";
 							class Value
 							{
 								class data
 								{
-									singleType="ARRAY";
-									class value
-									{
-										items=4;
-										class Item0
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=1;
-											};
-										};
-										class Item2
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-										class Item3
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=-1;
-											};
-										};
-									};
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};

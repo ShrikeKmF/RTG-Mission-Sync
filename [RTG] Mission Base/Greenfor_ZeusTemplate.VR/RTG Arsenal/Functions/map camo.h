@@ -11,6 +11,7 @@ TUN - Tundra
 */
 
 _mapNameArray = [
+    ["VR", "ARD"], // DEBUG CHANGE THIS
     ["Stratis", "ARD"],
     ["UMB_Colombia", "WDL"],
     ["Altis", "ARD"],
@@ -32,7 +33,6 @@ _mapNameArray = [
     ["Desert_E", "DES"],
     ["ProvingGrounds_PMC", "ARD"],
     ["Shapur_BAF", "DES"],
-    ["VR", "ARD"],
     ["Chernarus_Winter", "TUN"],
     ["Tanoa", "WDL"],
     ["IslaPera", "WDL"],

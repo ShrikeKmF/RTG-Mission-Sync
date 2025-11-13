@@ -68,6 +68,14 @@ _action = [
 // Resupply System
 ///////////////////////////////
 
+player addEventHandler ["InventoryOpened", {
+    [_this select 0] call RTG_fnc_initPouch;
+}];
+player addEventHandler ["InventoryClosed", {
+    [_this select 0] call RTG_fnc_initPouch;
+}];
+
+
 #define RESUPPLY_TIME 100
 #define RESUPPLY_TIME_OUTSIDE 50
 

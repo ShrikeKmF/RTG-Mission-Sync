@@ -14,7 +14,8 @@ _privateFragments = [
     "RTG Arsenal\Arsenal Items\arsenal_parts\Secondarys.sqf",
     "RTG Arsenal\Arsenal Items\arsenal_parts\Primarys.sqf",
     "RTG Arsenal\Arsenal Items\arsenal_parts\Attachments.sqf",
-    "RTG Arsenal\Arsenal Items\arsenal_parts\Facewear.sqf"
+    "RTG Arsenal\Arsenal Items\arsenal_parts\Facewear.sqf",
+    "RTG Arsenal\Arsenal Items\arsenal_parts\Grenades.sqf"
 ];	
 
 {
